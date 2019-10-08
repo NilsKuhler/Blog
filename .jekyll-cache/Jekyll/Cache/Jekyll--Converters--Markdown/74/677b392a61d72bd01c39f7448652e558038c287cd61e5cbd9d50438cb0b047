@@ -1,0 +1,94 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#jekyll-into" id="markdown-toc-jekyll-into">Jekyll into</a></li>
+  <li><a href="#selecting-a-jekyll-theme" id="markdown-toc-selecting-a-jekyll-theme">Selecting a jekyll theme</a></li>
+  <li><a href="#jekyll-usage" id="markdown-toc-jekyll-usage">Jekyll Usage</a></li>
+  <li><a href="#addingchanging-posts" id="markdown-toc-addingchanging-posts">Adding/Changing Posts</a></li>
+  <li><a href="#mark-down-syntax" id="markdown-toc-mark-down-syntax">Mark-down Syntax</a></li>
+  <li><a href="#indexhtml" id="markdown-toc-indexhtml">index.html</a></li>
+  <li><a href="#similar-post-and-comment-section" id="markdown-toc-similar-post-and-comment-section">Similar Post and Comment section</a></li>
+  <li><a href="#todos-work-in-progress-" id="markdown-toc-todos-work-in-progress-">TODOs, Work in Progress ….</a></li>
+  <li><a href="#similar-posts" id="markdown-toc-similar-posts">Similar Posts</a></li>
+</ul>
+
+<p>This blog item is about how to create this jekyll github website and blog items on this blog.</p>
+
+<h2 id="jekyll-into">Jekyll into</h2>
+
+<p>Jekyll is used to create simple static blow aware websites.
+More about jekyll can be found here <a href="https://jekyllrb.com/">https://jekyllrb.com/</a></p>
+
+<h2 id="selecting-a-jekyll-theme">Selecting a jekyll theme</h2>
+
+<p>This is the most fun part of creating a jekyll blog. Selecting the a theme for jekyll. 
+On the web you can find a lot of nice looking/ready made jekyll (theme) resources.</p>
+
+<p>I found my theme for this blog website on <a href="https://github.com/Gaohaoyang/gaohaoyang.github.io">https://github.com/Gaohaoyang/gaohaoyang.github.io</a>
+The original theme is in chinese. Use a demo of his site in combination with google translate to see what is on the site.</p>
+
+<p>You can to download a desired theme to a local directory. 
+From this local directory where you installed your theme, you should start the docker commands to startup jekyll</p>
+
+<h2 id="jekyll-usage">Jekyll Usage</h2>
+
+<p>Normally it is not straight forward to install all jekyll and ruby dependancies on a local machine. Therefore we make use of jekyll docker image. 
+A how-to blog about the usage of the jekyll docker image can be found on <a href="https://davemateer.com/2018/01/25/Jekyll-and-Docker">https://davemateer.com/2018/01/25/Jekyll-and-Docker</a>
+A quick windows 10 note. I think it is better to create a local windows user and use this one to let docker access a local volume.
+I think it is better to provide docker with a local windows user instead of your personal account.</p>
+
+<h2 id="addingchanging-posts">Adding/Changing Posts</h2>
+
+<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>The posts are using markdown sytax.</p>
+
+<p>One of the first actions when your blog website works is to create, edit and experimet yourself with an markdown file to start you first entry in the post list. 
+Please use the same file name convention as the other files.</p>
+
+<p><img src="/assets/img/localasset/posts/20191008_filelistposts.PNG" alt="filelist" /></p>
+
+<p>The file that you created will be directly visible. Changes that you make will also be directly visible.</p>
+
+<h2 id="mark-down-syntax">Mark-down Syntax</h2>
+<p>A markdown syntax guide can be found here <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a>
+In the header of a markdown document the possibilities can be extended. 
+E.g. by configuring in de markdown header</p>
+<pre><code class="language----">...
+mathjax: true
+...
+---
+$$
+f(x) = ax + b
+$$
+Inline Mathjax $a \neq b$
+</code></pre>
+<p>Results:
+<script type="math/tex">f(x) = ax + b</script> 
+Inline Mathjax $a \neq b$</p>
+
+<h2 id="indexhtml">index.html</h2>
+
+<p>Need to change the line “Welcome to HyG’s Blog!” To your own name or acronym.</p>
+
+<h2 id="similar-post-and-comment-section">Similar Post and Comment section</h2>
+
+<p>issue: On pages there should be a Similar Post section H2 Header. This does not appear always. Sometimes in Chinese??
+I temporarily solve this manually by adding a H2 section “Similar Content”</p>
+
+<p>issue: For comments the site uses discus. Since I want a simple readonly blog without any comments I want to take it out.</p>
+
+<h2 id="todos-work-in-progress-">TODOs, Work in Progress ….</h2>
+
+<ol>
+  <li>
+    <p>I have removed the collections, demo and about pages. 
+Will implement them whan I have my own versions ready.</p>
+  </li>
+  <li>
+    <p>The comment section I want to take out on the all the pages since I want this site to be read only.</p>
+  </li>
+</ol>
+
+<h2 id="similar-posts">Similar Posts</h2>
+:ET

@@ -8,8 +8,8 @@
 # Site settings
 title: NK
 brief-intro: DevOps Data Engineer
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://NilsKuhler.github.io" # the base hostname & protocol for your site
+baseurl: "Blog" # the subpath of your site, e.g. /blog
+url: "https://nilskuhler.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 

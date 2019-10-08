@@ -89,3 +89,21 @@ Will implement them whan I have my own versions ready.
 2. The comment section I want to take out on the all the pages since I want this site to be read only.
 
 ## Similar Posts
+
+## Checking in your version of the blog into github.com/
+
+The good news if that you do not have to install a github client to checkin the version of your blog. 
+You can use the same jekyll Docker instance to do the work for you. Git is installed in this docker image. 
+
+The github commands you need you can find here
+<https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line>
+
+With the github commands you can upload the (intial) version to your github account. 
+Make sure you are in the right directory. 
+```
+bash-5.0# pwd
+/srv/jekyll
+bash-5.0# ls
+LICENSE      _config.yml  _includes    _posts       _site        css          feed.xml     js
+README.md    _drafts      _layouts     _sass        assets       favicon.ico  index.html   page
+```

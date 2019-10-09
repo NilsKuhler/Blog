@@ -1,0 +1,169 @@
+I"r)<ul id="markdown-toc">
+  <li><a href="#why-jekyll-in-combination-with-github" id="markdown-toc-why-jekyll-in-combination-with-github">Why Jekyll in combination with Github</a></li>
+  <li><a href="#jekyll-introduction" id="markdown-toc-jekyll-introduction">Jekyll introduction</a></li>
+  <li><a href="#selecting-a-jekyll-theme" id="markdown-toc-selecting-a-jekyll-theme">Selecting a jekyll theme</a></li>
+  <li><a href="#how-to-use-jekyll-with-docker-and-running-docker-jekyll-image" id="markdown-toc-how-to-use-jekyll-with-docker-and-running-docker-jekyll-image">How to use Jekyll with Docker and running Docker Jekyll image</a></li>
+  <li><a href="#configuringrunning-the-jekyll-blog-site" id="markdown-toc-configuringrunning-the-jekyll-blog-site">Configuring/Running the jekyll blog site</a></li>
+  <li><a href="#addingchanging-posts" id="markdown-toc-addingchanging-posts">Adding/Changing Posts</a></li>
+  <li><a href="#mark-down-syntax" id="markdown-toc-mark-down-syntax">Mark-down Syntax</a></li>
+  <li><a href="#important-customizationchanges-the-standard-templates" id="markdown-toc-important-customizationchanges-the-standard-templates">Important customization/changes the standard templates.</a></li>
+  <li><a href="#checking-in-your-version-of-the-blog-into-your-githubcom-account" id="markdown-toc-checking-in-your-version-of-the-blog-into-your-githubcom-account">Checking in your version of the blog into your github.com account</a></li>
+  <li><a href="#issues-blog-similar-post-and-comment-section" id="markdown-toc-issues-blog-similar-post-and-comment-section">Issues Blog Similar Post and Comment section</a></li>
+  <li><a href="#todos-work-in-progress-blog-website" id="markdown-toc-todos-work-in-progress-blog-website">TODOs, Work in Progress Blog website….</a></li>
+</ul>
+
+<p>This blog item is about how to create this jekyll github website and blog items on this blog.</p>
+
+<h2 id="why-jekyll-in-combination-with-github">Why Jekyll in combination with Github</h2>
+
+<p>It is a way to host a (static) nice looking website for free. 
+It is also a very usefull way to share github content.</p>
+
+<h2 id="jekyll-introduction">Jekyll introduction</h2>
+
+<p>Jekyll is used to create simple static blow aware websites.
+More about jekyll can be found here <a href="https://jekyllrb.com/">https://jekyllrb.com/</a></p>
+
+<h2 id="selecting-a-jekyll-theme">Selecting a jekyll theme</h2>
+
+<p>This is the most fun part of creating a jekyll blog. Selecting the a theme for jekyll. 
+On the web you can find a lot of nice looking/ready made jekyll (theme) resources.</p>
+
+<p>I found my theme for this blog website on <a href="https://github.com/Gaohaoyang/gaohaoyang.github.io">https://github.com/Gaohaoyang/gaohaoyang.github.io</a>
+The original theme is in chinese. Use a demo of his site in combination with google translate to see what is on the site.</p>
+
+<p>You can to download a desired theme to a local directory. 
+From this local directory where you installed your theme, you should start the docker commands to startup jekyll</p>
+
+<h2 id="how-to-use-jekyll-with-docker-and-running-docker-jekyll-image">How to use Jekyll with Docker and running Docker Jekyll image</h2>
+
+<p>Normally it is not straight forward to install all jekyll and ruby dependancies on a local machine. Therefore we make use of jekyll docker image. 
+A how-to blog about the usage of the jekyll docker image can be found on <a href="https://davemateer.com/2018/01/25/Jekyll-and-Docker">https://davemateer.com/2018/01/25/Jekyll-and-Docker</a>
+A quick windows 10 note. I think it is better to create a local windows user and use this one to let docker access a local volume.
+I think it is better to provide docker with a local windows user instead of your personal account.</p>
+
+<h2 id="configuringrunning-the-jekyll-blog-site">Configuring/Running the jekyll blog site</h2>
+<p>In the main directory of your blog site you will find a _config.yml. 
+You can edit the file to changes several properties to you liking. 
+Here I will only describe some less trivial changes.</p>
+
+<p>Please note that the baseurl in the _config.yml should be “” or empty when running a local website with jekyll and docker. 
+When running/deploying the your blog website on github it needs to contain the name of your repository.</p>
+
+<p>In my case I use the value Blog for baseurl when deploying the site to my github Blog repository.</p>
+
+<p>If I run the site with baseurl=”/Blog” I will get a local error in the jekyll log
+[2019-10-09 03:16:25] ERROR `/Blog’ not found.
+If have not yet determined how to check the logging of your jekyll site when it is deployed on github. “TODO”
+I think it is not possible to see the error log on github.</p>
+
+<p>So when you want to run/develop the sitel locally you have to switch back the baseurl=”” manually.</p>
+
+<h2 id="addingchanging-posts">Adding/Changing Posts</h2>
+
+<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>The posts are using markdown sytax. See next paragraph for details about markdown.</p>
+
+<p>One of the first actions when your blog website works is to create, edit and experimet yourself with an markdown file to start you first entry in the post list. 
+Please use the same file name convention as the other files.</p>
+
+<p><img src="/assets/img/localasset/posts/20191008_filelistposts.PNG" alt="filelist" /></p>
+
+<p>The file that you created will be directly visible. Changes that you make will also be directly visible.</p>
+
+<h2 id="mark-down-syntax">Mark-down Syntax</h2>
+<p>A markdown syntax guide can be found here <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet</a>
+In the header of a markdown document the possibilities can be extended. 
+E.g. by configuring in de markdown header</p>
+<pre><code class="language----">...
+mathjax: true
+...
+---
+$$
+f(x) = ax + b
+$$
+Inline Mathjax $a \neq b$
+</code></pre>
+<p>Results:
+<script type="math/tex">f(x) = ax + b</script> 
+Inline Mathjax $a \neq b$</p>
+
+<h2 id="important-customizationchanges-the-standard-templates">Important customization/changes the standard templates.</h2>
+
+<p>index.html -&gt; Need to change the line “Welcome to HyG’s Blog!” To your own name or acronym. 
+_config.yml When running/deploying the your blog website on github it needs to contain the name of your repository.</p>
+
+<h2 id="checking-in-your-version-of-the-blog-into-your-githubcom-account">Checking in your version of the blog into your github.com account</h2>
+
+<p>The good news if that you do not have to install a github client to checkin the version of your blog. 
+You can use the same jekyll Docker instance to do the work for you. Git is installed in this docker image.</p>
+
+<p>The github commands you need you can find here
+<a href="https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line">https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line</a></p>
+
+<p>With the github commands you can upload the (intial) version to your github account. 
+Please nake sure you are in the right directory, when executing the git commands. 
+You also need to configure the right github user and email account.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-5.0# pwd
+/srv/jekyll
+bash-5.0# ls
+LICENSE      _config.yml  _includes    _posts       _site        css          feed.xml     js
+README.md    _drafts      _layouts     _sass        assets       favicon.ico  index.html   page
+</code></pre></div></div>
+
+<p>The following git commands can also be usefull</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#For adding a remote github definition/destination 
+git remote add origin https://github.com/&lt;Your Github userid&gt;/Blog.git    
+#In case you want to update your files in case of conflicts and
+#Your local files can overrule the file on git. 
+git push -u origin master --force      
+
+</code></pre></div></div>
+
+<p>If all goes well then my website underneeth will be up and running.
+<a href="https://nilskuhler.github.io/Blog/">https://nilskuhler.github.io/Blog/</a></p>
+
+<h2 id="issues-blog-similar-post-and-comment-section">Issues Blog Similar Post and Comment section</h2>
+
+<ol>
+  <li>
+    <p>On pages there should be a Similar Post section H2 Header. This does not appear always. Sometimes in Chinese?? I have temporarily solve this manually by adding a H2 section “Similar Content”</p>
+  </li>
+  <li>
+    <p>For comments the site uses discus. Since I want a simple readonly blog without any comments I want to take it out. Need to find out how to do this.</p>
+  </li>
+</ol>
+
+<h2 id="todos-work-in-progress-blog-website">TODOs, Work in Progress Blog website….</h2>
+
+<ol>
+  <li>
+    <p>I have removed the collections, demo and about pages. 
+Will implement them whan I have my own versions ready.</p>
+  </li>
+  <li>
+    <p>The comment section I want to take out on the all the pages since I want this site to be read only.</p>
+  </li>
+  <li>
+    <p>Can you see theJekyll Error log on github</p>
+  </li>
+  <li>
+    <p>If blog items have a title which is too long than the app messes up and blog items are not shown correctly.</p>
+  </li>
+  <li>
+    <p>A lot of overhead to initially install a jekyll templates. See initial jekyll deployment steps description.</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Initial jekyll deployment steps:
+Initially I could not get my github repo to serve my jekyll Blog application correctly
+After recreating the repo from scrath and initializing it with a jekyll theme
+Tested the initial jekyll website
+Deleted orginal Readme.md and _config.yml
+git push -u origin master --force #To overwrite everything with the correct values for baseurl and url
+It worked. 
+TODO is sort out if above steps are neccessary. 
+</code></pre></div>    </div>
+  </li>
+</ol>
+:ET

@@ -1,4 +1,4 @@
-I"�B<ul id="markdown-toc">
+I"|C<ul id="markdown-toc">
   <li><a href="#why-jekyll--githubpages" id="markdown-toc-why-jekyll--githubpages">Why Jekyll &amp; Github(pages)?</a></li>
   <li><a href="#github-pages" id="markdown-toc-github-pages">Github (pages)</a></li>
   <li><a href="#jekyll-introduction" id="markdown-toc-jekyll-introduction">Jekyll introduction</a></li>
@@ -9,10 +9,10 @@
   <li><a href="#mark-down-syntax" id="markdown-toc-mark-down-syntax">Mark-down Syntax</a></li>
   <li><a href="#liquid-in-html-pages" id="markdown-toc-liquid-in-html-pages">Liquid in HTML pages</a></li>
   <li><a href="#images-in-markdown" id="markdown-toc-images-in-markdown">Images in markdown</a></li>
-  <li><a href="#configuring-git" id="markdown-toc-configuring-git">Configuring git</a></li>
-  <li><a href="#for-adding-a-remote-github-definitiondestination" id="markdown-toc-for-adding-a-remote-github-definitiondestination">For adding a remote github definition/destination</a></li>
-  <li><a href="#in-case-you-want-to-update-your-remote-files-and-in-case-of-conflicts" id="markdown-toc-in-case-you-want-to-update-your-remote-files-and-in-case-of-conflicts">In case you want to update your remote files and in case of conflicts</a></li>
-  <li><a href="#with-the-following-command-your-local-files-will-be-overruled-the-file-on-git" id="markdown-toc-with-the-following-command-your-local-files-will-be-overruled-the-file-on-git">With the following command your local files will be overruled the file on git.</a></li>
+  <li><a href="#github-pages-changes" id="markdown-toc-github-pages-changes">(Github pages) Changes</a></li>
+  <li><a href="#using-docker-git-client" id="markdown-toc-using-docker-git-client">Using Docker git client</a></li>
+  <li><a href="#github-commands" id="markdown-toc-github-commands">Git(hub) Commands</a></li>
+  <li><a href="#todos-issues-" id="markdown-toc-todos-issues-">TODOs, Issues, …</a></li>
 </ul>
 
 <p>This blog item is about how to create Jekyll github website and blog items on this blog.</p>
@@ -197,124 +197,130 @@ Inline Mathjax $a \neq b$</p>
 <h2 id="images-in-markdown">Images in markdown</h2>
 
 <p>When you are developing locally you can for example refer to local images in your markdown as follows</p>
-<pre><code class="language-[![](/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)```">This reference will show up fine on you local website. 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![](/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
+</code></pre></div></div>
 
-The image will not be shown correctly when you deploy your site to github. 
-When you want to work with images you can use an absolute github reference
-```[![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)```
+<p>This reference image will show up fine on you local website. The image will not be shown correctly when you deploy your site to github pages.</p>
 
-In this way it will images will be shown correctly locally and on github pages assuming you have deployed your images on github. 
+<p>When you want to work with images you can use an absolute github reference path of the image. E.g.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
+</code></pre></div></div>
 
+<p>In this way it will images will be shown correctly locally and on github pages assuming you have deployed your images on github.</p>
 
-However this 
+<p>However this</p>
 
-https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG
+<p>https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG</p>
 
-## (Github pages) Changes
+<h2 id="github-pages-changes">(Github pages) Changes</h2>
 
-Here is a short description which changes I have made on the standard templates for the Blog and Resume card (Github pages) websites
+<p>Here is a short description which changes I have made on the standard templates for the Blog and Resume card (Github pages) websites</p>
 
-Customizations blog:
-* index.html -&gt; Change content like Welcome statement. 
-* _config.yml -&gt; Configurations
-* includes directory -&gt; Changes to header and footer pages
+<p>Customizations blog:</p>
+<ul>
+  <li>index.html -&gt; Change content like Welcome statement.</li>
+  <li>_config.yml -&gt; Configurations</li>
+  <li>includes directory -&gt; Changes to header and footer pages</li>
+</ul>
 
-Customizations Resumecard:
-*  _config.yml -&gt; Configurations and added summary field
-* index.html -&gt; Added Liquid code to display summary field
-* includes directory -&gt; changed header so that the html appears correctly in mobile devices. Removed download pdf functionality
+<p>Customizations Resumecard:</p>
+<ul>
+  <li>_config.yml -&gt; Configurations and added summary field</li>
+  <li>index.html -&gt; Added Liquid code to display summary field</li>
+  <li>includes directory -&gt; changed header so that the html appears correctly in mobile devices. Removed download pdf functionality</li>
+</ul>
 
-Please note that if you make changes to the _config.yml you need to restart your server. The site need to be rebuild in case of changes to _config.yml. You can rebuild the site in many different ways, but the most common way is to run `Jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated. What might be confusing is that some *.html files are generated. Jekyll loging in the Docker console will mention when it regenerates/uses files E.g. 
+<p>Please note that if you make changes to the _config.yml you need to restart your server. The site need to be rebuild in case of changes to _config.yml. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">Jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated. What might be confusing is that some *.html files are generated. Jekyll loging in the Docker console will mention when it regenerates/uses files E.g. 
 resumeblog_nils |       Regenerating: 1 file(s) changed at 2019-10-16 05:49:12
 resumeblog_nils |                     _posts/2019-10-08-how to create this blog.md
-resumeblog_nils |                     ...done in 0.6711092 seconds.
+resumeblog_nils |                     …done in 0.6711092 seconds.</p>
 
+<h2 id="using-docker-git-client">Using Docker git client</h2>
 
-## Using Docker git client
+<p>As soon as you have developed and tested your local version of the website, you can check in your changes into your github repository.</p>
 
-As soon as you have developed and tested your local version of the website, you can check in your changes into your github repository. 
-
-The good news when using docker if that you do not have to install a github desktop client to checkin the version of your blog. You can use the same Jekyll Docker instance to do the work for you. Git is installed in this docker image.
-You can connect to your docker instance (where your site is running) by using the following docker command:
-</code></pre>
-<p>docker exec -it <git repository="" name=""> resumecarden_nils /bin/bash  # use this to connect to your docker instance</git></p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please nake sure you are in the right directory:
+<p>The good news when using docker if that you do not have to install a github desktop client to checkin the version of your blog. You can use the same Jekyll Docker instance to do the work for you. Git is installed in this docker image.
+You can connect to your docker instance (where your site is running) by using the following docker command:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it &lt;git repository name&gt; resumecarden_nils /bin/bash  # use this to connect to your docker instance
 </code></pre></div></div>
-<p>bash-5.0# pwd
+<p>Please nake sure you are in the right directory:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash-5.0# pwd
 /srv/Jekyll
 bash-5.0# ls
 LICENSE      _config.yml  _includes    _posts       _site        css          feed.xml     js
-README.md    _drafts      _layouts     _sass        assets       favicon.ico  index.html   page</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## Git(hub) Commands
+README.md    _drafts      _layouts     _sass        assets       favicon.ico  index.html   page
+</code></pre></div></div>
 
-The git commands you need to checkin and work with your repositories can be found here:
+<h2 id="github-commands">Git(hub) Commands</h2>
 
+<p>The git commands you need to checkin and work with your repositories can be found here:</p>
 
-&lt;https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line&gt;
+<p><a href="https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line">https://help.github.com/en/articles/adding-an-existing-project-to-github-using-the-command-line</a></p>
 
+<p><a href="https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html">https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html</a></p>
 
-&lt;https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html&gt;
+<p>With the git commands you can upload the (intial) version to your github account. Before executing the git commands. You also need to configure the right github user and email account.
+Please review the following commands.</p>
 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Configuring git
+git config --global user.email "your email"
+git config --global user.name "your name"
 
-With the git commands you can upload the (intial) version to your github account. Before executing the git commands. You also need to configure the right github user and email account.
-Please review the following commands.
+# For adding a remote github definition/destination 
+git remote add origin https://github.com/&lt;Your Github userid&gt;/Blog.git    
 
+git remote add origin https://github.com/nilskuhler/resumecard.git
 
+git add .                                       # add all files in current folder to local repo
+git add &lt;folder&gt;/*                              # for one folder
+git add *                                       # for every thing
+
+git commit -m ""                                # commit to local repo
+
+git push -u origin master                       # commit to remote repo
+
+git status
+
+git ls-files *.md                               # list all *.md files in a local repository
+
+git rm *.md                                     # remove all *.md files in a local repository
+
+# In case you want to update your remote files and in case of conflicts
+# With the following command your local files will be overruled the file on git. 
+git push -u origin master --force      
 
 </code></pre></div></div>
-<h1 id="configuring-git">Configuring git</h1>
-<p>git config –global user.email “your email”
-git config –global user.name “your name”</p>
 
-<h1 id="for-adding-a-remote-github-definitiondestination">For adding a remote github definition/destination</h1>
-<p>git remote add origin https://github.com/<Your Github="" userid="">/Blog.git</Your></p>
+<p>If all goes well then your website https://yourname.github.io/websitename/ will be up and running.</p>
 
-<p>git remote add origin https://github.com/nilskuhler/resumecard.git</p>
+<h2 id="todos-issues-">TODOs, Issues, …</h2>
 
-<p>git add .                                       # add all files in current folder to local repo
-git add <folder>/*                              # for one folder
-git add *                                       # for every thing</folder></p>
+<p>TODOs, Issues, Work in Progress gitpages …</p>
 
-<p>git commit -m “”                                # commit to local repo</p>
-
-<p>git push -u origin master                       # commit to remote repo</p>
-
-<p>git status</p>
-
-<p>git ls-files *.md                               # list all *.md files in a local repository</p>
-
-<p>git rm *.md                                     # remove all *.md files in a local repository</p>
-
-<h1 id="in-case-you-want-to-update-your-remote-files-and-in-case-of-conflicts">In case you want to update your remote files and in case of conflicts</h1>
-<h1 id="with-the-following-command-your-local-files-will-be-overruled-the-file-on-git">With the following command your local files will be overruled the file on git.</h1>
-<p>git push -u origin master –force</p>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-If all goes well then your website https://yourname.github.io/websitename/ will be up and running. 
-
-
-## TODOs, Issues, ...
-
-TODOs, Issues, Work in Progress gitpages ...
-
-1. Sometimes On pages there should be a "Similar Post" section H2 Header. This does not appear always. Sometimes in Chinese?? I have temporarily solve this manually by adding a H2 section "Similar Content"
-
-2. For comments the original site uses discus. Since I want a simple readonly blog I took it out. Possibly in the future I want to include comments. 
-
-3. I have removed the collections, demo and about pages. Will possibly implement them whan I have my own versions ready. 
-
-4. If blog items have a title which is too long than the app messes up and blog items are not shown correctly. 
-
-5. A lot of overhead to initially install a Jekyll templates. See initial Jekyll deployment steps description. 
-</code></pre></div></div>
-<p>Initial Jekyll deployment steps:
+<ol>
+  <li>
+    <p>Sometimes On pages there should be a “Similar Post” section H2 Header. This does not appear always. Sometimes in Chinese?? I have temporarily solve this manually by adding a H2 section “Similar Content”</p>
+  </li>
+  <li>
+    <p>For comments the original site uses discus. Since I want a simple readonly blog I took it out. Possibly in the future I want to include comments.</p>
+  </li>
+  <li>
+    <p>I have removed the collections, demo and about pages. Will possibly implement them whan I have my own versions ready.</p>
+  </li>
+  <li>
+    <p>If blog items have a title which is too long than the app messes up and blog items are not shown correctly.</p>
+  </li>
+  <li>
+    <p>A lot of overhead to initially install a Jekyll templates. See initial Jekyll deployment steps description.</p>
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Initial Jekyll deployment steps:
 Initially I could not get my github repo to serve my Jekyll Blog application correctly
 After recreating the repo from scrath and initializing it with a Jekyll theme
 Tested the initial Jekyll website
 Deleted orginal Readme.md and _config.yml
-git push -u origin master –force #To overwrite everything with the correct values for baseurl and url
+git push -u origin master --force #To overwrite everything with the correct values for baseurl and url
 It worked. 
-TODO is sort out if above steps are neccessary.
-```</p>
+TODO is sort out if above steps are neccessary. 
+</code></pre></div>    </div>
+  </li>
+</ol>
 :ET

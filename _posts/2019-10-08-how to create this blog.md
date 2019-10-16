@@ -161,12 +161,16 @@ My findings about Liquid
 ## Images in markdown
 
 When you are developing locally you can for example refer to local images in your markdown as follows
-```[![](/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)```
-This reference will show up fine on you local website. 
+```
+[![](/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
+```
 
-The image will not be shown correctly when you deploy your site to github. 
-When you want to work with images you can use an absolute github reference
-```[![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)```
+This reference image will show up fine on you local website. The image will not be shown correctly when you deploy your site to github pages.
+ 
+When you want to work with images you can use an absolute github reference path of the image. E.g.
+```
+[![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
+```
 
 In this way it will images will be shown correctly locally and on github pages assuming you have deployed your images on github. 
 

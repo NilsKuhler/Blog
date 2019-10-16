@@ -54,11 +54,11 @@ I found the following themes.
  --------------------------- | ---------------------------------------- 
   Git hub home Blog          |   <https://github.com/Gaohaoyang/gaohaoyang.github.io> 
  --------------------------- | ---------------------------------------- 
-  Demo                       |   [![](/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
+  Demo                       |   [![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
  --------------------------- | ---------------------------------------- 
   Git hub home resume card   |   <https://github.com/ddbullfrog/resumecard>
  --------------------------- | ---------------------------------------- 
-  Demo                       |   [![](/assets/img/localasset/posts/20191008_orig_resume.PNG)](https://gaohaoyang.github.io/)
+  Demo                       |   [![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_resume.PNG)](https://gaohaoyang.github.io/)
 
 
 
@@ -110,7 +110,7 @@ The posts are using markdown sytax. See next paragraph for details about markdow
 It is good practise to use the same file name convention as the other files. 
 
 
-![filelist](/assets/img/localasset/posts/20191008_filelistposts.PNG)
+![filelist](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_filelistposts.PNG)
 
 
 ## Mark-down Syntax
@@ -157,6 +157,23 @@ Jekyl uses a template language called liquid. This language is used inside the *
 
 My findings about Liquid
 * When using liquid filters it is important to check what kind of type is returned.The returned type of filters is not documented in liquid reference guide. By printing the filter on the html page (and using filters like size) you can check what type is returned.
+
+## Images in markdown
+
+When you are developing locally you can for example refer to local images in your markdown as follows
+```[![](/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)```
+This reference will show up fine on you local website. 
+
+The image will not be shown correctly when you deploy your site to github. 
+When you want to work with images you can use an absolute github reference
+```[![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)```
+
+In this way it will images will be shown correctly locally and on github pages assuming you have deployed your images on github. 
+
+
+However this 
+
+https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG
 
 ## (Github pages) Changes
 

@@ -1,4 +1,4 @@
-I"›<ul id="markdown-toc">
+I"Ý<ul id="markdown-toc">
   <li><a href="#why-jekyll--githubpages" id="markdown-toc-why-jekyll--githubpages">Why Jekyll &amp; Github(pages)?</a></li>
   <li><a href="#github-pages" id="markdown-toc-github-pages">Github (pages)</a></li>
   <li><a href="#jekyll-introduction" id="markdown-toc-jekyll-introduction">Jekyll introduction</a></li>
@@ -56,7 +56,7 @@ On the web you can find a lots of nice looking/ready made Jekyll (theme) resourc
   <tbody>
     <tr>
       <td>Demo</td>
-      <td><a href="https://gaohaoyang.github.io/"><img src="/assets/img/localasset/posts/20191008_orig_blog.PNG" alt="" /></a></td>
+      <td><a href="https://gaohaoyang.github.io/"><img src="https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG" alt="" /></a></td>
     </tr>
   </tbody>
   <tbody>
@@ -68,7 +68,7 @@ On the web you can find a lots of nice looking/ready made Jekyll (theme) resourc
   <tbody>
     <tr>
       <td>Demo</td>
-      <td><a href="https://gaohaoyang.github.io/"><img src="/assets/img/localasset/posts/20191008_orig_resume.PNG" alt="" /></a></td>
+      <td><a href="https://gaohaoyang.github.io/"><img src="https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_resume.PNG" alt="" /></a></td>
     </tr>
   </tbody>
 </table>

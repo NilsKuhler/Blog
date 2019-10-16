@@ -1,0 +1,75 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#why-jekyll--githubpages" id="markdown-toc-why-jekyll--githubpages">Why Jekyll &amp; Github(pages)?</a></li>
+  <li><a href="#github-pages" id="markdown-toc-github-pages">Github (pages)</a></li>
+  <li><a href="#jekyll-introduction" id="markdown-toc-jekyll-introduction">Jekyll introduction</a></li>
+  <li><a href="#selecting-a-jekyll-theme" id="markdown-toc-selecting-a-jekyll-theme">Selecting a Jekyll theme</a></li>
+</ul>
+
+<p>This blog item is about how to create Jekyll github website and blog items on this blog.</p>
+
+<h2 id="why-jekyll--githubpages">Why Jekyll &amp; Github(pages)?</h2>
+
+<p>Why use Jekyll in combination with Github(pages)? It is a way to host a nice looking (static) website for free. It is also a very usefull way to share github content.</p>
+
+<h2 id="github-pages">Github (pages)</h2>
+
+<p>Github.com is a website where you can create a software repository. For more information about github please check:</p>
+
+<p><a href="https://guides.github.com/activities/hello-world/">https://guides.github.com/activities/hello-world/</a></p>
+
+<p>Github.io also known as github pages is a static site hosting service where you can serve github repository content via http. For more information about github pages please check:</p>
+
+<p><a href="https://pages.github.com">https://pages.github.com</a></p>
+
+<p>Enabling your github repository to be server up via github.io is is relatively straightforward. 
+Log in in github. Select a repository. Go to “Settings”. Go to “Github Pages” section. Select “master branch” and and “Choose a theme”. After choosing a theme in the “Github section” there is immediately  shown a url where you can access your website. E.g.</p>
+
+<p><a href="https://nilskuhler.github.io/Blog/">https://nilskuhler.github.io/Blog/</a></p>
+
+<h2 id="jekyll-introduction">Jekyll introduction</h2>
+
+<p>Jekyll is used to create simple static blog aware websites.
+More about Jekyll can be found here:</p>
+
+<p><a href="https://Jekyllrb.com/">https://Jekyllrb.com/</a></p>
+
+<h2 id="selecting-a-jekyll-theme">Selecting a Jekyll theme</h2>
+
+<p>This is the most fun part of creating a Jekyll blog. Selecting the a theme for Jekyll. 
+On the web you can find a lots of nice looking/ready made Jekyll (theme) resources.</p>
+
+<p>I found the following themes.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jekyll theme</th>
+      <th>Web link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Git hub home Blog</td>
+      <td><a href="https://github.com/Gaohaoyang/gaohaoyang.github.io">https://github.com/Gaohaoyang/gaohaoyang.github.io</a></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Demo</td>
+      <td><a href="https://gaohaoyang.github.io/"><img src="/assets/img/localasset/posts/20191008_orig_blog.PNG" alt="" /></a></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Git hub home resume card</td>
+      <td><a href="https://github.com/ddbullfrog/resumecard">https://github.com/ddbullfrog/resumecard</a></td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>Demo</td>
+      <td><a href="https://gaohaoyang.github.io/"><img src="/assets/img/localasset/posts/20191008_orig_resume.PNG" alt="" /></a></td>
+    </tr>
+  </tbody>
+</table>
+:ET

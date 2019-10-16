@@ -8,20 +8,24 @@
 # Site settings
 title: NK
 brief-intro: DevOps Data Engineer
-baseurl: "/Blog" #Github "/Blog" # the subpath of your site, e.g. /blog
-url: "https://nilskuhler.github.io" # the base hostname & protocol for your site
-
+# >>OR use baseurl and url to deploy this site remotely/github
+baseurl: "/Blog"                    # "/Blog" # the subpath of your remote site, e.g. /blog
+url: "https://nilskuhler.github.io" # the url hostname & protocol for your remote site
+# >>OR use baseurl and url to deploy this site locally
+##baseurl: ""                         # The baseurl should be empty to run locally
+##url: "https://nilskuhler.github.io" # The url name doesn't have to be empty to run locally
 
 permalink: /:year/:month/:day/:title/
 
 # other links
 twitter_username: 
 facebook_username: 
-github_username:  NilsKuhler
+github_web: https://nilskuhler.github.io/mygithub/
+github_username: NilsKuhler
 email: 
 weibo_username: 
 zhihu_username: 
-linkedIn_username: 
+linkedIn_username: nilskuhler
 dribbble_username:
 
 description_footer:

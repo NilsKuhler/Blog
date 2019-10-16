@@ -232,6 +232,10 @@ git push -u origin master                       # commit to remote repo
 
 git status
 
+git ls-files *.md                               # list all *.md files in a local repository
+
+git rm *.md                                     # remove all *.md files in a local repository
+
 # In case you want to update your remote files and in case of conflicts
 # With the following command your local files will be overruled the file on git. 
 git push -u origin master --force      

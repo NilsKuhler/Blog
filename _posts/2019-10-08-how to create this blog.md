@@ -172,12 +172,8 @@ When you want to work with images you can use an absolute github reference path 
 [![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
 ```
 
-In this way it will images will be shown correctly locally and on github pages assuming you have deployed your images on github. 
+There is probably a way to use a local reference that work locally and on github but you can use absolute references if you do not want to encounter (relative) reference problems. 
 
-
-However this 
-
-https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG
 
 ## (Github pages) Changes
 

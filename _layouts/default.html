@@ -11,8 +11,10 @@
 
     {% include footer.html %}
     {% include backToTop.html %}
-    <script src="{{ " /js/main.js " | prepend: site.baseurl }}" charset="utf-8"></script>
-    <script src="{{ " /js/smooth-scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+	<!-- Workaround {{ " /js/main.js " | prepend: site.baseurl }} does not work use hardcoded references -->
+    <script src="https://nilskuhler.github.io/Blog/js/main.js" charset="utf-8"></script>
+    <script src="https://nilskuhler.github.io/Blog/js/smooth-scroll.min.js" charset="utf-8"></script>
+	<!-- End Workaround -->
     <script type="text/javascript">
       smoothScroll.init({
         speed: 500, // Integer. How fast to complete the scroll in milliseconds

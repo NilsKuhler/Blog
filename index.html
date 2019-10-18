@@ -168,5 +168,8 @@ layout: default
         </div>
     </div>
 </div>
-<script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
-<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+
+<!-- Workaround {{ "/js/scroll.min.js " | prepend: site.baseurl }}" Does not work on github. Use hardcoded references. -->
+<script src="https://nilskuhler.github.io/Blog/js/scroll.min.js" charset="utf-8"></script>
+<script src="https://nilskuhler.github.io/Blog/js/pageContent.js" charset="utf-8"></script>
+<!-- End workaround -->

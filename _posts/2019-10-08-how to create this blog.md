@@ -275,6 +275,9 @@ TODOs, Issues, Work in Progress gitpages ...
 4. If blog items have a title which is too long than the app messes up and blog items are not shown correctly. 
 
 5. A lot of overhead to initially install a Jekyll templates. See initial Jekyll deployment steps description. 
+
+6. The Menu item is not working properly in mobile web browser. 
+
 ```
 Initial Jekyll deployment steps:
 Initially I could not get my github repo to serve my Jekyll Blog application correctly

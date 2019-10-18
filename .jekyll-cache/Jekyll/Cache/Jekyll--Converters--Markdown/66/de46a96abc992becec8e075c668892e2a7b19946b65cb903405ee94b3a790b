@@ -1,4 +1,4 @@
-I"|C<ul id="markdown-toc">
+I"çC<ul id="markdown-toc">
   <li><a href="#why-jekyll--githubpages" id="markdown-toc-why-jekyll--githubpages">Why Jekyll &amp; Github(pages)?</a></li>
   <li><a href="#github-pages" id="markdown-toc-github-pages">Github (pages)</a></li>
   <li><a href="#jekyll-introduction" id="markdown-toc-jekyll-introduction">Jekyll introduction</a></li>
@@ -206,11 +206,7 @@ Inline Mathjax $a \neq b$</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
 </code></pre></div></div>
 
-<p>In this way it will images will be shown correctly locally and on github pages assuming you have deployed your images on github.</p>
-
-<p>However this</p>
-
-<p>https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG</p>
+<p>There is probably a way to use a local reference that work locally and on github but you can use absolute references if you do not want to encounter (relative) reference problems.</p>
 
 <h2 id="github-pages-changes">(Github pages) Changes</h2>
 
@@ -312,7 +308,13 @@ git push -u origin master --force
   </li>
   <li>
     <p>A lot of overhead to initially install a Jekyll templates. See initial Jekyll deployment steps description.</p>
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Initial Jekyll deployment steps:
+  </li>
+  <li>
+    <p>The Menu item is not working properly in mobile web browser.</p>
+  </li>
+</ol>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Initial Jekyll deployment steps:
 Initially I could not get my github repo to serve my Jekyll Blog application correctly
 After recreating the repo from scrath and initializing it with a Jekyll theme
 Tested the initial Jekyll website
@@ -320,7 +322,5 @@ Deleted orginal Readme.md and _config.yml
 git push -u origin master --force #To overwrite everything with the correct values for baseurl and url
 It worked. 
 TODO is sort out if above steps are neccessary. 
-</code></pre></div>    </div>
-  </li>
-</ol>
+</code></pre></div></div>
 :ET

@@ -9,11 +9,11 @@
 title: NK
 brief-intro: DevOps Data Engineer
 # >>OR use baseurl and url to deploy this site remotely/github
-##baseurl: "/Blog"                    # "/Blog" # the subpath of your remote site, e.g. /blog
-##url: "https://nilskuhler.github.io" # the url hostname & protocol for your remote site
+baseurl: "/Blog"                    # "/Blog" # the subpath of your remote site, e.g. /blog
+url: "https://nilskuhler.github.io" # the url hostname & protocol for your remote site
 # >>OR use baseurl and url to deploy this site locally
-baseurl: ""                         # The baseurl should be empty to run locally
-url: "https://nilskuhler.github.io" # The url name doesn't have to be empty to run locally
+##baseurl: ""                         # The baseurl should be empty to run locally
+##url: "https://nilskuhler.github.io" # The url name doesn't have to be empty to run locally
 
 permalink: /:year/:month/:day/:title/
 

@@ -1,13 +1,15 @@
-I"�C<ul id="markdown-toc">
+I"�Q<ul id="markdown-toc">
   <li><a href="#why-jekyll--githubpages" id="markdown-toc-why-jekyll--githubpages">Why Jekyll &amp; Github(pages)?</a></li>
   <li><a href="#github-pages" id="markdown-toc-github-pages">Github (pages)</a></li>
   <li><a href="#jekyll-introduction" id="markdown-toc-jekyll-introduction">Jekyll introduction</a></li>
   <li><a href="#selecting-a-jekyll-theme" id="markdown-toc-selecting-a-jekyll-theme">Selecting a Jekyll theme</a></li>
   <li><a href="#how-to-use-jekyll--docker" id="markdown-toc-how-to-use-jekyll--docker">How to use Jekyll &amp; Docker</a></li>
   <li><a href="#configuring-your-site" id="markdown-toc-configuring-your-site">Configuring your site</a></li>
+  <li><a href="#do-not-baseurl" id="markdown-toc-do-not-baseurl">DO NOT baseurl=””</a></li>
   <li><a href="#addingchanging-posts" id="markdown-toc-addingchanging-posts">Adding/Changing Posts</a></li>
   <li><a href="#mark-down-syntax" id="markdown-toc-mark-down-syntax">Mark-down Syntax</a></li>
-  <li><a href="#liquid-in-html-pages" id="markdown-toc-liquid-in-html-pages">Liquid in HTML pages</a></li>
+  <li><a href="#liquid-in-htmlmd" id="markdown-toc-liquid-in-htmlmd">Liquid in HTML&amp;MD</a></li>
+  <li><a href="#urls-in-mark-down" id="markdown-toc-urls-in-mark-down">Urls in Mark down</a></li>
   <li><a href="#images-in-markdown" id="markdown-toc-images-in-markdown">Images in markdown</a></li>
   <li><a href="#github-pages-changes" id="markdown-toc-github-pages-changes">(Github pages) Changes</a></li>
   <li><a href="#using-docker-git-client" id="markdown-toc-using-docker-git-client">Using Docker git client</a></li>
@@ -109,8 +111,10 @@ On the web you can find a lots of nice looking/ready made Jekyll (theme) resourc
 
     <p>Remote Settings: In my case I use the value “/Blog” for baseurl when deploying the site to my github Blog repository.</p>
 
-    <p>Local settings: baseurl should be “” or empty. url in the _config.yml might need also be set to “” E.g. If I run the site with baseurl=”/Blog” I will get a local error in the Jekyll log:
- [2019-10-09 03:16:25] ERROR `/Blog’ not found.</p>
+    <p>Local settings: 
+ baseurl should be empty.(DO NOT USE “” ) url in the _config.yml . If I run the site with baseurl=”/Blog” I will get a local error in the Jekyll log:
+ [2019-10-09 03:16:25] ERROR `/Blog’ not found.
+ url should contain the same value as for production. The mobile menu does not work correctly if there is not provided a value for this variable.</p>
   </li>
   <li>Error file location on github (when deploying on server. You have to go to the github repository and settings and Github pages section. Possibly deployment errors are mentioned in the Github pages section.</li>
   <li>
@@ -121,6 +125,13 @@ On the web you can find a lots of nice looking/ready made Jekyll (theme) resourc
     <p><a href="https://github.com/NilsKuhler/Blog">https://github.com/NilsKuhler/Blog</a></p>
   </li>
 </ul>
+
+<h2 id="do-not-baseurl">DO NOT baseurl=””</h2>
+
+<p>IMPORTANT NOTE BLOG: please do use “” for baseurl or url</p>
+
+<p>The site functionality to load *.js files depends on the functionality. 
+If you use baseurl = “” instead of baseurl = the js libraries are not loaded correctly and the menu functionality for a mobile site will not work properly.</p>
 
 <h2 id="addingchanging-posts">Adding/Changing Posts</h2>
 
@@ -162,9 +173,9 @@ Inline Mathjax $a \neq b$</p>
 
 <p>My experience in Markdown is to only use 2 newlines(2x Return) in Markdown files to print a newline in an HTML document. HTML break and other suggestions did not work yet for me.</p>
 
-<h2 id="liquid-in-html-pages">Liquid in HTML pages</h2>
+<h2 id="liquid-in-htmlmd">Liquid in HTML&amp;MD</h2>
 
-<p>Jekyl uses a template language called liquid. This language is used inside the *.html pages.</p>
+<p>Jekyl uses a template language called liquid. This language is used inside the *.html pages and can also be used in *.MD or *.Markdown files.</p>
 
 <table>
   <thead>
@@ -194,7 +205,50 @@ Inline Mathjax $a \neq b$</p>
   <li>When using liquid filters it is important to check what kind of type is returned.The returned type of filters is not documented in liquid reference guide. By printing the filter on the html page (and using filters like size) you can check what type is returned.</li>
 </ul>
 
+<p>I include the code underneeth in this paragraph. You wil see this paragrap ending with the message underneeth.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+{% assign hello="My Message: At the end of the paragraph" %}
+{{ hello }}
+
+
+My Message: At the end of the paragraph
+</code></pre></div></div>
+
+<h2 id="urls-in-mark-down">Urls in Mark down</h2>
+
+<p>In my code of the blog I applied a workaround on serveral *.js libraries.</p>
+
+<p>In default.html:
+/js/main.js
+/js/smooth-scroll.min.js</p>
+
+<p>In index.html 
+/js/scroll.min.js     # This library did not exist anymore. I commented it out in the code. 
+/js/pageContent.js</p>
+
+<p>The original code seem to work fine when deployed locally when using _config.yml/baseurl = “”. There was a problem in the original code when deployed on github/remotely. The *.js libraries were not loaded properly.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Code of the original blog
+&lt;script src=" /js/smooth-scroll.min.js " charset="utf-8"&gt;&lt;/script&gt;
+</code></pre></div></div>
+<p>When debugging screens in google crome developer console. The console shows e.g. that it cannot find the 
+*main.js library. Because the application cannot find the libraries, the small(mobile) menu structure does not work in the blog site. 
+For this reason it is desirable to solve the problem.</p>
+
+<p>In the current code of my blog I use a different URL when working locally or remotely. Please review my code on github for the exact solution. 
+It is not desirable to use hardcoded libraries locally; e.g.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> src="https://nilskuhler.github.io/Blog/js/main.js"
+</code></pre></div></div>
+<p>Using a hardcoded library will be a solution to 
+it slows local site/development down and it makes you dependant from an externel library source when developing. For this reason it is better to use the solution described above.</p>
+
 <h2 id="images-in-markdown">Images in markdown</h2>
+
+<p>I will describe in this paragraph two ways to display images correctly in markdown.<br />
+Since there images have a different path when they are hosted locally or remotely.</p>
+
+<p>1) Include absolute path of image from github.</p>
 
 <p>When you are developing locally you can for example refer to local images in your markdown as follows</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![](/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
@@ -205,8 +259,10 @@ Inline Mathjax $a \neq b$</p>
 <p>When you want to work with images you can use an absolute github reference path of the image. E.g.</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
 </code></pre></div></div>
+<p>In this way your images will show up correctly locally and remotely. However if want your images to appear you need to be connected to the internet. This is a disadvantage of using a absolute path.</p>
 
-<p>There is probably a way to use a local reference that work locally and on github but you can use absolute references if you do not want to encounter (relative) reference problems.</p>
+<p>2) Use a Liquid variable in you markdown. This is a similar solution as described in the paragraph “Urls in Mark down”
+You define a Liquid imagepath variable. Test if your baseURL is empty or not, dependent on the result of the test you define the complete path of the variable.</p>
 
 <h2 id="github-pages-changes">(Github pages) Changes</h2>
 
@@ -310,7 +366,7 @@ git push -u origin master --force
     <p>A lot of overhead to initially install a Jekyll templates. See initial Jekyll deployment steps description.</p>
   </li>
   <li>
-    <p>The Menu item is not working properly in mobile web browser.</p>
+    <p>It is not clear how to use relative paths for images and js script libraries. It does not seem to work. Currently were using absolute paths. Possibly there might be a problem that e.g. using “/Blog” values might result in problems when concating other strings. When deploying the original code to github there was a problem that a library (concatenated) string did contain the right value. Need to investigate this later on ….</p>
   </li>
 </ol>
 

@@ -169,7 +169,16 @@ layout: default
     </div>
 </div>
 
-<!-- Workaround {{ "/js/scroll.min.js " | prepend: site.baseurl }}" Does not work on github. Use hardcoded references. -->
-<script src="https://nilskuhler.github.io/Blog/js/scroll.min.js" charset="utf-8"></script>
-<script src="https://nilskuhler.github.io/Blog/js/pageContent.js" charset="utf-8"></script>
+<!-- Workaround {{ "/js/scroll.min.js " | prepend: site.baseurl }}" Does not work on github. does not work use following for local and remote settings. The code assumes an empty site.baseurl for running a local site.  -->
+
+{% if site.baseurl %}
+   <!-- assign scrolljs = "/js/scroll.min.js" | prepend: site.baseurlTEST | prepend: site.urlTEST ...scroll.min.js does not exists -->
+   {% assign pageContentjs = "/js/pageContent.js" | prepend: site.baseurlTEST | prepend: site.urlTEST  %}
+{% else %}
+   <!-- assign scrolljs = "/js/scroll.min.js" ... scroll.min.js does not exists-->
+   {% assign pageContentjs = "/js/pageContent.js" %}
+{% endif %}
+
+<script src="{{ scrolljs }}" charset="utf-8"></script>
+<script src="{{ pageContentjs }}" charset="utf-8"></script>
 <!-- End workaround -->

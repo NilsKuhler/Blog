@@ -86,8 +86,11 @@ Some of the less trivial changes:
 
    Remote Settings: In my case I use the value "/Blog" for baseurl when deploying the site to my github Blog repository. 
    
-   Local settings: baseurl should be "" or empty. url in the _config.yml might need also be set to "" E.g. If I run the site with baseurl="/Blog" I will get a local error in the Jekyll log:
+   Local settings: 
+   baseurl should be empty.(DO NOT USE "" ) url in the _config.yml . If I run the site with baseurl="/Blog" I will get a local error in the Jekyll log:
    [2019-10-09 03:16:25] ERROR `/Blog' not found.
+   url should contain the same value as for production. The mobile menu does not work correctly if there is not provided a value for this variable. 
+   
 * Error file location on github (when deploying on server. You have to go to the github repository and settings and Github pages section. Possibly deployment errors are mentioned in the Github pages section. 
 * You can review the exact setting _config and changes I made to my github pages here:
 
@@ -97,7 +100,12 @@ Some of the less trivial changes:
    
    <https://github.com/NilsKuhler/Blog>
 
- 
+##  DO NOT baseurl=""
+
+IMPORTANT NOTE BLOG: please do use "" for baseurl or url
+
+The site functionality to load *.js files depends on the functionality. 
+If you use baseurl = "" instead of baseurl = the js libraries are not loaded correctly and the menu functionality for a mobile site will not work properly. 
 
 ## Adding/Changing Posts
 
@@ -145,9 +153,9 @@ https://gist.github.com/shaunlebron/746476e6e7a4d698b373
 
 My experience in Markdown is to only use 2 newlines(2x Return) in Markdown files to print a newline in an HTML document. HTML break and other suggestions did not work yet for me. 
 
-## Liquid in HTML pages
+## Liquid in HTML&MD
 
-Jekyl uses a template language called liquid. This language is used inside the *.html pages. 
+Jekyl uses a template language called liquid. This language is used inside the *.html pages and can also be used in *.MD or *.Markdown files.
 
  Liquid resources                      | comment
  ------------------------------------- | ----------------------------
@@ -158,7 +166,55 @@ Jekyl uses a template language called liquid. This language is used inside the *
 My findings about Liquid
 * When using liquid filters it is important to check what kind of type is returned.The returned type of filters is not documented in liquid reference guide. By printing the filter on the html page (and using filters like size) you can check what type is returned.
 
+I include the code underneeth in this paragraph. You wil see this paragrap ending with the message underneeth.
+
+```
+{% raw %}
+{% assign hello="My Message: At the end of the paragraph" %}
+{{ hello }}
+{% endraw %}
+{% assign hello="My Message: At the end of the paragraph" %}
+{{ hello }}
+```
+
+## Urls in Mark down
+
+In my code of the blog I applied a workaround on serveral *.js libraries. 
+
+In default.html:
+/js/main.js
+/js/smooth-scroll.min.js
+
+In index.html 
+/js/scroll.min.js     # This library did not exist anymore. I commented it out in the code. 
+/js/pageContent.js
+
+The original code seem to work fine when deployed locally when using _config.yml/baseurl = "". There was a problem in the original code when deployed on github/remotely. The *.js libraries were not loaded properly. 
+
+
+```
+#Code of the original blog
+<script src="{{ " /js/smooth-scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
+```
+When debugging screens in google crome developer console. The console shows e.g. that it cannot find the 
+*main.js library. Because the application cannot find the libraries, the small(mobile) menu structure does not work in the blog site. 
+For this reason it is desirable to solve the problem. 
+
+In the current code of my blog I use a different URL when working locally or remotely. Please review my code on github for the exact solution. 
+It is not desirable to use hardcoded libraries locally; e.g.
+```
+ src="https://nilskuhler.github.io/Blog/js/main.js"
+```
+Using a hardcoded library will be a solution to 
+it slows local site/development down and it makes you dependant from an externel library source when developing. For this reason it is better to use the solution described above. 
+
+
 ## Images in markdown
+
+I will describe in this paragraph two ways to display images correctly in markdown.  
+Since there images have a different path when they are hosted locally or remotely. 
+
+1) Include absolute path of image from github. 
 
 When you are developing locally you can for example refer to local images in your markdown as follows
 ```
@@ -171,9 +227,10 @@ When you want to work with images you can use an absolute github reference path 
 ```
 [![](https://nilskuhler.github.io/Blog/assets/img/localasset/posts/20191008_orig_blog.PNG)](https://gaohaoyang.github.io/)
 ```
+In this way your images will show up correctly locally and remotely. However if want your images to appear you need to be connected to the internet. This is a disadvantage of using a absolute path. 
 
-There is probably a way to use a local reference that work locally and on github but you can use absolute references if you do not want to encounter (relative) reference problems. 
-
+2) Use a Liquid variable in you markdown. This is a similar solution as described in the paragraph "Urls in Mark down"
+You define a Liquid imagepath variable. Test if your baseURL is empty or not, dependent on the result of the test you define the complete path of the variable. 
 
 ## (Github pages) Changes
 
@@ -276,7 +333,7 @@ TODOs, Issues, Work in Progress gitpages ...
 
 5. A lot of overhead to initially install a Jekyll templates. See initial Jekyll deployment steps description. 
 
-6. The Menu item is not working properly in mobile web browser. 
+6. It is not clear how to use relative paths for images and js script libraries. It does not seem to work. Currently were using absolute paths. Possibly there might be a problem that e.g. using "/Blog" values might result in problems when concating other strings. When deploying the original code to github there was a problem that a library (concatenated) string did contain the right value. Need to investigate this later on ....
 
 ```
 Initial Jekyll deployment steps:

@@ -11,9 +11,16 @@
 
     {% include footer.html %}
     {% include backToTop.html %}
-	<!-- Workaround {{ " /js/main.js " | prepend: site.baseurl }} does not work use hardcoded references -->
-    <script src="https://nilskuhler.github.io/Blog/js/main.js" charset="utf-8"></script>
-    <script src="https://nilskuhler.github.io/Blog/js/smooth-scroll.min.js" charset="utf-8"></script>
+	<!-- Workaround {{ " /js/main.js " | prepend: site.baseurl }} does not work use following for local and remote settings. The code assumes an empty site.baseurl for running a local site.  -->
+	{% if site.baseurl %}
+       {% assign mainjs = "/js/main.js" | prepend: site.baseurlTEST | prepend: site.urlTEST  %}
+       {% assign smoothjs = "/js/smooth-scroll.min.js" | prepend: site.baseurlTEST | prepend: site.urlTEST  %}	
+    {% else %}
+       {% assign mainjs = "/js/main.js"  %}
+       {% assign smoothjs = "/js/smooth-scroll.min.js" %}	
+	{% endif%}
+    <script src="{{ mainjs }}" charset="utf-8"></script>
+    <script src="{{ smoothjs }}" charset="utf-8"></script>
 	<!-- End Workaround -->
     <script type="text/javascript">
       smoothScroll.init({

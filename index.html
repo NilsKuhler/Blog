@@ -173,12 +173,12 @@ layout: default
 
 {% if site.baseurl %}
    <!-- assign scrolljs = "/js/scroll.min.js" | prepend: site.baseurlTEST | prepend: site.urlTEST ...scroll.min.js does not exists -->
-   {% assign pageContentjs = "/js/pageContent.js" | prepend: site.baseurlTEST | prepend: site.urlTEST  %}
+   {% assign pageContentjs = "/js/pageContent.js" | prepend: site.baseurl | prepend: site.url %}
 {% else %}
    <!-- assign scrolljs = "/js/scroll.min.js" ... scroll.min.js does not exists-->
    {% assign pageContentjs = "/js/pageContent.js" %}
 {% endif %}
 
-<script src="{{ scrolljs }}" charset="utf-8"></script>
+<!-- script src="{{ scrolljs }}" charset="utf-8"></script  -->
 <script src="{{ pageContentjs }}" charset="utf-8"></script>
 <!-- End workaround -->

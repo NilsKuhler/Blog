@@ -13,8 +13,8 @@
     {% include backToTop.html %}
 	<!-- Workaround {{ " /js/main.js " | prepend: site.baseurl }} does not work use following for local and remote settings. The code assumes an empty site.baseurl for running a local site.  -->
 	{% if site.baseurl %}
-       {% assign mainjs = "/js/main.js" | prepend: site.baseurlTEST | prepend: site.urlTEST  %}
-       {% assign smoothjs = "/js/smooth-scroll.min.js" | prepend: site.baseurlTEST | prepend: site.urlTEST  %}	
+       {% assign mainjs = "/js/main.js" | prepend: site.baseurl | prepend: site.url  %}
+       {% assign smoothjs = "/js/smooth-scroll.min.js" | prepend: site.baseurl | prepend: site.url %}	
     {% else %}
        {% assign mainjs = "/js/main.js"  %}
        {% assign smoothjs = "/js/smooth-scroll.min.js" %}	

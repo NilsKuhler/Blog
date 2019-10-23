@@ -259,7 +259,7 @@ As soon as you have developed and tested your local version of the website, you 
 The good news when using docker if that you do not have to install a github desktop client to checkin the version of your blog. You can use the same Jekyll Docker instance to do the work for you. Git is installed in this docker image.
 You can connect to your docker instance (where your site is running) by using the following docker command:
 ```
-docker exec -it <git repository name> resumecarden_nils /bin/bash  # use this to connect to your docker instance
+docker exec -it <docker instance id>  /bin/bash  # use this to connect to your docker instance
 ```
 Please nake sure you are in the right directory:
 ```

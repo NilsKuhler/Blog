@@ -1,4 +1,4 @@
-I"‡Q<ul id="markdown-toc">
+I"€Q<ul id="markdown-toc">
   <li><a href="#why-jekyll--githubpages" id="markdown-toc-why-jekyll--githubpages">Why Jekyll &amp; Github(pages)?</a></li>
   <li><a href="#github-pages" id="markdown-toc-github-pages">Github (pages)</a></li>
   <li><a href="#jekyll-introduction" id="markdown-toc-jekyll-introduction">Jekyll introduction</a></li>
@@ -230,7 +230,7 @@ My Message: At the end of the paragraph
 <p>The original code seem to work fine when deployed locally when using _config.yml/baseurl = ‚Äú‚Äù. There was a problem in the original code when deployed on github/remotely. The *.js libraries were not loaded properly.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#Code of the original blog
-&lt;script src="/Blog /js/smooth-scroll.min.js " charset="utf-8"&gt;&lt;/script&gt;
+&lt;script src=" /js/smooth-scroll.min.js " charset="utf-8"&gt;&lt;/script&gt;
 </code></pre></div></div>
 <p>When debugging screens in google crome developer console. The console shows e.g. that it cannot find the 
 *main.js library. Because the application cannot find the libraries, the small(mobile) menu structure does not work in the blog site. 

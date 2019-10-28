@@ -16,7 +16,7 @@ This blog is about a Coursera Data Science course "https://www.coursera.org/lear
 
 Details about the course:
 
-{% include_relative courses/included/course_detail.md selectedcourse=526 %}
+{% include course_detail.md selectedcourse=526 %}
 
 ## TO DO Use case
 

@@ -16,7 +16,7 @@ This blog is about a Coursera Data Science course "Developing Data Products" tha
 
 Details about the course:
 
-{% include_relative courses/included/course_detail.md selectedcourse=527 %}
+{% include course_detail.md selectedcourse=527 %}
 
 ## TO DO Use case
 

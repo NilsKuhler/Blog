@@ -15,7 +15,7 @@ This blog is about a Coursera course "Single page web apps with angularjs" that 
 
 Details about the course:
 
-{% include_relative courses/included/course_detail.md selectedcourse=502 %}
+{% include course_detail.md selectedcourse=502 %}
 
 ## TO DO Use case
 

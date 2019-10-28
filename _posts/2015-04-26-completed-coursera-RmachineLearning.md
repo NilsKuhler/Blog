@@ -16,7 +16,8 @@ This blog is about a Coursera "Practical Machine Learning" course that I complet
 
 Details about the course:
 
-{% include_relative courses/included/course_detail.md selectedcourse=531 %}
+
+{% include course_detail.md selectedcourse=531 %}
 
 ## TO DO Use case
 

@@ -16,7 +16,7 @@ This blog is about a Coursera course "New Venture Finance: Startup Funding for E
 
 Details about the course:
 
-{% include_relative courses/included/course_detail.md selectedcourse=522 %}
+{% include course_detail.md selectedcourse=522 %}
 
 ## TO DO Use case
 

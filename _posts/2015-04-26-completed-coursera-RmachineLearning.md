@@ -14,13 +14,10 @@ This blog is about a Coursera "Practical Machine Learning" course that I complet
 
 ## Coursera course "Practical Machine Learning"
 
-Details about the course can be found here. 
+Details about the course:
 
-<https://www.coursera.org/learn/practical-machine-learning>
+{% include_relative courses/included/course_detail.md selectedcourse=531 %}
 
-Extract course description
-"One of the most common tasks performed by data scientists and data analysts are prediction and machine learning"
+## TO DO Use case
 
-
-The (final) results can be found here:
-<http://nilskooler.github.io/Course-Coursera-Machine-learning-R-predmachlearn/PredictionMotivation.html>
+## TO DO Business case

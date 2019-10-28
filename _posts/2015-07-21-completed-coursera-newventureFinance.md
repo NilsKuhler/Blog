@@ -14,14 +14,10 @@ This blog is about a Coursera course "New Venture Finance: Startup Funding for E
 
 ## Coursera course "New Venture Finance: Startup Funding for Entrepreneurs"
 
-Details about the course can be found here. 
+Details about the course:
 
-<https://www.coursera.org/learn/startup-funding>
+{% include_relative courses/included/course_detail.md selectedcourse=522 %}
 
-Extract course description
-"This course is for aspiring or active entrepreneurs who wants to understand how to secure funding for their company. This course will demystify key financing concepts to give entrepreneurs and aspiring entrepreneurs a guide to secure funding."
+## TO DO Use case
 
-We needed to finishup the course with a presentation. 
-The presentation can be found here
-
-<http://nilskooler.github.io/Course-Business-Coursera-NewVentureFinance/New Venture Finance - Demo Presentation GTES.pdf>
+## TO DO Business case

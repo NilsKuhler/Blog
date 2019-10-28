@@ -1,0 +1,21 @@
+I"{<ul id="markdown-toc">
+  <li><a href="#added-new-course-pages-to-this-blog" id="markdown-toc-added-new-course-pages-to-this-blog">Added new course pages to this blog</a></li>
+  <li><a href="#added-new-generic-course-info-include-page" id="markdown-toc-added-new-generic-course-info-include-page">Added new generic course info include page</a></li>
+</ul>
+
+<h2 id="added-new-course-pages-to-this-blog">Added new course pages to this blog</h2>
+
+<p>I added a complete course list as an application page to this blog. 
+All completed courses can be found in the top right menu. 
+All course can be found here:</p>
+
+<p><a href="/course/">course page</a></p>
+
+<h2 id="added-new-generic-course-info-include-page">Added new generic course info include page</h2>
+
+<p>Also an generic course component info which can be used to display specific course info on a blog page is created.
+This generic component can be found in the include folder underneeth the blog pages.</p>
+
+<p>This component wil/can be reused in my blog pages. Check the following example:
+<a href="/2015/04/26/completed-coursera-RmachineLearning/">blog page with course component info</a></p>
+:ET

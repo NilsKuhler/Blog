@@ -13,12 +13,10 @@ This blog is about a Coursera course "Single page web apps with angularjs" that 
 
 ## Coursera course "Single page web apps with angularjs"
 
-Details about the course can be found here.
+Details about the course:
 
-<https://www.coursera.org/learn/single-page-web-apps-with-angularjs>
+{% include_relative courses/included/course_detail.md selectedcourse=502 %}
 
-The course teaches you to build a single web page HTML5,CSS and angular app.
-The end result is deployed on Heroku cloud and can be reached via my github website. 
+## TO DO Use case
 
-<https://nilskooler.github.io/Course-Programming-Coursera-angular-ass5/>
-
+## TO DO Business case

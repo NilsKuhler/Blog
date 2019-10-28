@@ -11,40 +11,22 @@ datatable: true
 * content
 {:toc}
 
+## Added new course pages to this blog
 
+I added a complete course list as an application page to this blog. 
+All completed courses can be found in the top right menu. 
+All course can be found here:
 
+[course page](/course/)
 
-## Design of this page
+## Added new generic course info include page
 
-This blog page is currently a draft webpage. 
-This blog item reads in all completed courses from file and will display them in a table. 
+Also an generic course component info which can be used to display specific course info on a blog page is created.
+This generic component can be found in the include folder underneeth the blog pages.
 
-## My completed courses
+This component wil/can be reused in my blog pages. Check the following example:
+[blog page with course component info](/2015/04/26/completed-coursera-RmachineLearning/) 
 
-
-<table width="70%" class="display">
-   <thead>
-	<tr width="70%">
-		<th>Date</th>
-		<th>Course Description </th>
-		<th>Provider/Institution</th>
-		<th>Comment</th>
-	</tr>
-   </thead>
-   <tbody>   
-{% assign row_index = 0 %}         <!--row index not used for the moment -->
-
-	{% for course in site.data.courses.allcourses %}
-    <tr width="70%">
-    {% assign row_index = row_index | plus : 1 %}
-	    <td> {{ course.date | slice : 0 , 4 }} </td> 
-		<td> {{ course.course }} </td>
-		<td> {{ course.institution1  }} </td>
-   		<td> {{ course.institution1.Comment | append : course.grade }} </td>
-    </tr>
-	{% endfor %}
-   </tbody>
-</table>
 
 
 

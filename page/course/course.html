@@ -1,0 +1,168 @@
+---
+layout: default
+title: Courses
+permalink: /course/
+icon: 
+type: page
+---
+
+<script src="/js/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".navi").click(function() {
+        var courseID = $(this).attr("value");
+		$('[id^='+courseID+']').toggle();
+});
+});
+//Please note that this script selects several table lines with the same id.
+//This seems to work fine. Normally id of HTML elements need to be unique. 
+//If it appears to be neccesarry the ID of the lines that need to be toggled
+// can be extended e.g. id=500.1 id=500.2 etc... 
+</script>
+
+<div class="page clearfix">
+    <div class="left">
+        <h1>Completed courses overview</h1>
+        <hr>
+            <div class="side">
+
+        <h2>Intro</h2>
+	    <p>This page (will) document(s) all course and trainings completed. Click last column in table underneeth to display more course details. Legend; An explaination of the symbols used in the last column underneeth.</p>
+		<table class="display">
+		<thead>
+		<tr><th>Symbol</th><th>Meaning</th></tr>
+		</thead>
+		<tbody>
+        <tr><td><span title="Most course details filled in">&#9989;</span></td><td>Most course details filled in</td></tr>
+        <tr><td><span title="Few course details filled in">&#128221;</span></td><td>Few course details filled in</td></tr>
+		<tr><td></td><td>Some or no course details filled in</td></tr>
+		</tbody>
+		</table>  
+				  
+        <h2>History completed course table </h2>
+
+
+<style type="text/css">
+.hiderow { display:none; }
+</style>
+
+
+<table width="70%" class="display">
+   <thead>
+	<tr width="70%">
+		<th>Date</th>
+		<th>Course Description </th>
+		<th>Institution</th>
+		<th><center>&#128071;</center></th>
+	</tr>
+   </thead>
+   <tbody>   
+{% assign row_index = 0 %}         <!--row index not used for the moment -->
+
+	{% for course in site.data.courses.allcourses %}
+
+		{% assign courseid= course.courseid %}
+		{% assign coursename = course.course %}
+		{% assign courseid = course.courseid %}
+		{% assign coursedate = course.date %}
+		{% assign courseinst1 = course.institution1 %}
+		{% assign courseinst2 = course.institution2 %}
+		{% assign coursegrade = course.grade %}
+		{% assign coursecomment_short = course.comment %}
+		{% assign courseurl = course.url_course %}
+		{% assign coursemyurl = course.myurl_course %}
+		{% assign coursemyurlresult = course.myurl_result %}
+		{% assign course_summary = course.summary %}
+		
+		{% assign nb_custom_fields = 0 %}
+		{% if courseurl %}
+		   {% assign nb_custom_fields = nb_custom_fields | plus : 1 %}
+		{% endif %}
+		{% if coursemyurlresult %}
+			{% assign nb_custom_fields = nb_custom_fields | plus : 1 %}
+		{% endif %}
+		{% if coursemyurl %}
+			{% assign nb_custom_fields = nb_custom_fields | plus : 1 %}
+		{% endif %}
+		{% if course_summary %}
+			{% assign nb_custom_fields = nb_custom_fields | plus : 1 %}
+		{% endif %}		
+		
+
+		{% assign detail_indicator = "" %}
+		{% if nb_custom_fields > 2 %}
+		   {% assign span_text = "Most course details filled in" %}
+		   {% capture detail_indicator %}<span title="{{ span_text }}">&#9989;</span>{% endcapture %}
+		{% elsif nb_custom_fields > 0 %}
+		   {% assign span_text = "Few course details filled in" %}
+		   {% capture detail_indicator %}<span title="{{ span_text }}">&#128221;</span>{% endcapture %}
+		{% endif %}
+	
+	
+    <tr width="70%">
+    {% assign row_index = row_index | plus : 1 %}
+	    <td> {{ course.date | slice : 0 , 4 }} </td> 
+		<td> {{ course.course }} </td>
+		<td> {{ course.institution1  }} </td>
+		<td><button type="button" value="{{ course.courseid }}" class="navi" ><center>&#128073;<span title="Show or hide Course details of course">Course details</span></button></center><BR><center>{{ detail_indicator }}</center></td>
+    </tr>
+	
+ 		<tr class="hiderow" id="{{course.courseid}}"><th colspan=4><center>--- Begin course details overview ---</center><BR>MyCourseID & Course Name</th></tr>
+		<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ courseid }} - {{ coursename }} </td></tr>
+		<tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Course Provider / Institution</th></tr>
+		
+		{% if courseinst2 %}
+		{% assign courseinst_str = courseinst1 | append : " by " | append : courseinst2 %}
+		{% else %}	
+		{% assign courseinst_str = courseinst1 %}		
+		{% endif %}
+		
+		
+		<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ courseinst_str }} </td></tr>
+	    <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Date completed & Result</th></tr></thead>
+		<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ coursedate }} {{ coursegrade | prepend : "Result:"}} </td></tr>
+		<tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Link - Course Description-provider</th></tr>
+		{% if courseurl %}
+			{% capture hrefstr %}<a href="{{ courseurl }}">{{ courseurl }}</a>{% endcapture %}
+			<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ hrefstr }} </td></tr>
+		{% else %}	
+				<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No course description link available </td></tr>		
+		{% endif %}
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Link - course result(s) e.g. github</th></tr>
+		{% if coursemyurlresult %}
+	        {% capture hrefstr %}<a href="{{ coursemyurlresult }}">{{ coursemyurlresult }}</a>{% endcapture %}
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ hrefstr }} </td></tr>
+		{% else %}	
+				<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No course result link available </td></tr>	
+		{% endif %}	
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Link - My blog course comments/summary on course</th></tr>
+		{% if coursemyurl %}
+		    {% capture hrefstr %}<a href="{{ coursemyurl }}">{{ coursemyurl }}</a>{% endcapture %}
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ hrefstr }} </td></tr>
+		{% else %}
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No course blog course comments/summary available </td></tr>
+		{% endif %}
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Short inline summary on course</th></tr>		
+		{% if course_summary %}
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ course_summary }} </td></tr>
+		{% else %}
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No summary available </td></tr>
+		{% endif %}
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4><center>--- End course details overview ---</center></th></tr>	
+		
+	{% endfor %}
+   </tbody>
+</table>
+
+<h2>Number of course listed</h2>
+
+There are {{row_index }} number of courses listed on this page. 
+				
+			</div>	
+
+    </div>
+
+
+
+</div>
+<script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script>

@@ -14,14 +14,10 @@ This blog is about a Coursera Data Science course "https://www.coursera.org/lear
 
 ## Coursera course "Reproducible research"
 
-Details about the course can be found here. 
+Details about the course:
 
-<https://www.coursera.org/learn/reproducible-research>
+{% include_relative courses/included/course_detail.md selectedcourse=526 %}
 
-Extract course description
-"This course focuses on the concepts and tools behind reporting modern data analyses in a reproducible manner. Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them."
+## TO DO Use case
 
-
-The (final) results can be found here:
-
-<http://nilskooler.github.io/Course-Data-Science-Coursera-Preproducible_Research_Ass1/PA1_template.html>
+## TO DO Business case

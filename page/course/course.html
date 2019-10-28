@@ -5,8 +5,15 @@ permalink: /course/
 icon: 
 type: page
 ---
+{% if site.baseurl %}
+   <!-- assign scrolljs = "/js/scroll.min.js" | prepend: site.baseurlTEST | prepend: site.urlTEST ...scroll.min.js does not exists -->
+   {% assign jQueryJs = "/js/jquery.min.js" | prepend: site.baseurl | prepend: site.url %}
+{% else %}
+   <!-- assign scrolljs = "/js/scroll.min.js" ... scroll.min.js does not exists-->
+   {% assign  jQueryJs = "/js/jquery.min.js" %}
+{% endif %}
 
-<script src="/js/jquery.min.js"></script>
+<script src="{{ jQueryJs }}"></script>
 <script>
 $(document).ready(function(){
   $(".navi").click(function() {

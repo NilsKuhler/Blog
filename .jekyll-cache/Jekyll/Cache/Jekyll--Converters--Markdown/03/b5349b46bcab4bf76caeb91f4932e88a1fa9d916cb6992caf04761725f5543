@@ -1,0 +1,23 @@
+I"<ul id="markdown-toc">
+  <li><a href="#added-new-course-pages-to-this-blog" id="markdown-toc-added-new-course-pages-to-this-blog">Added new course pages to this blog</a></li>
+  <li><a href="#added-new-generic-course-info-include-page" id="markdown-toc-added-new-generic-course-info-include-page">Added new generic course info include page</a></li>
+</ul>
+
+<h2 id="added-new-course-pages-to-this-blog">Added new course pages to this blog</h2>
+
+<p>I added a complete courses list as an application page to this blog. 
+All completed courses can be found in the top right menu. 
+The course list can be found here:</p>
+
+<p><a href="https://nilskuhler.github.io/Blog/course/">https://nilskuhler.github.io/Blog/course/</a></p>
+
+<h2 id="added-new-generic-course-info-include-page">Added new generic course info include page</h2>
+
+<p>Also an generic course component info which can be used to display specific course info on a blog page is created.
+This generic component can be found in the include folder underneath the blog pages.</p>
+
+<p>This component wil/can be reused in my blog pages. Check the following example:</p>
+
+<p><a href="https://nilskuhler.github.io/Blog/2016/05/06/completed-coursera-angular-course/">https://nilskuhler.github.io/Blog/2016/05/06/completed-coursera-angular-course/</a></p>
+
+:ET

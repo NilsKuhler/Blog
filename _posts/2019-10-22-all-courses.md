@@ -17,7 +17,9 @@ I added a complete course list as an application page to this blog.
 All completed courses can be found in the top right menu. 
 All course can be found here:
 
-[course page](/course/)
+<https://nilskuhler.github.io/Blog/course/>
+
+
 
 ## Added new generic course info include page
 
@@ -25,7 +27,10 @@ Also an generic course component info which can be used to display specific cour
 This generic component can be found in the include folder underneeth the blog pages.
 
 This component wil/can be reused in my blog pages. Check the following example:
-[blog page with course component info](/2015/04/26/completed-coursera-RmachineLearning/) 
+
+<https://nilskuhler.github.io/Blog/2016/05/06/completed-coursera-angular-course/>
+
+
 
 
 

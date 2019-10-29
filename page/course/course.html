@@ -57,15 +57,14 @@ $(document).ready(function(){
 <table width="70%" class="display">
    <thead>
 	<tr width="70%">
-		<th>Date</th>
-		<th>Course Description </th>
+		<th>Date/Course Description </th>
 		<th>Institution</th>
 		<th><center>&#128071;</center></th>
 	</tr>
    </thead>
-   <tbody>   
+  
 {% assign row_index = 0 %}         <!--row index not used for the moment -->
-
+{% assign last_print_date = "" %}
 	{% for course in site.data.courses.allcourses %}
 
 		{% assign courseid= course.courseid %}
@@ -104,19 +103,29 @@ $(document).ready(function(){
 		   {% assign span_text = "Few course details filled in" %}
 		   {% capture detail_indicator %}<span title="{{ span_text }}">&#128221;</span>{% endcapture %}
 		{% endif %}
+
 	
-	
+		{% assign date_year_course = course.date | slice : 0 , 4 %}			
+		{% if last_print_date != date_year_course %}
+	<thead><tr width="70%" colspan=3 >
+		<td  style="font-size:140%;"><strong>{{ date_year_course }}</strong></td>
+		<td></td>
+		<td></td>
+	    </tr>
+	</thead>
+			{% assign last_print_date = date_year_course %}
+	    {% endif %}	
+		
     <tr width="70%">
     {% assign row_index = row_index | plus : 1 %}
-	    <td> {{ course.date | slice : 0 , 4 }} </td> 
 		<td> {{ course.course }} </td>
 		<td> {{ course.institution1  }} </td>
-		<td><button type="button" value="{{ course.courseid }}" class="navi" ><center>&#128073;<span title="Show or hide Course details of course">Course details</span></button></center><BR><center>{{ detail_indicator }}</center></td>
+		<td><button type="button" value="{{ course.courseid }}" class="navi"><center>&#128073;<span title="Show or hide Course details of course">Course details</span></button></center><BR><center>{{ detail_indicator }}</center></td>
     </tr>
 	
- 		<tr class="hiderow" id="{{course.courseid}}"><th colspan=4><center>--- Begin course details overview ---</center><BR>MyCourseID & Course Name</th></tr>
-		<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ courseid }} - {{ coursename }} </td></tr>
-		<tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Course Provider / Institution</th></tr>
+ 		<tr class="hiderow" id="{{course.courseid}}"><th colspan=3><center>--- Begin course details overview ---</center><BR>MyCourseID & Course Name</th></tr>
+		<tr class="hiderow" id="{{course.courseid}}"><td colspan=3> {{ courseid }} - {{ coursename }} </td></tr>
+		<tr class="hiderow" id="{{course.courseid}}"><th colspan=3>Course Provider / Institution</th></tr>
 		
 		{% if courseinst2 %}
 		{% assign courseinst_str = courseinst1 | append : " by " | append : courseinst2 %}
@@ -125,40 +134,38 @@ $(document).ready(function(){
 		{% endif %}
 		
 		
-		<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ courseinst_str }} </td></tr>
-	    <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Date completed & Result</th></tr></thead>
-		<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ coursedate }} {{ coursegrade | prepend : "Result:"}} </td></tr>
-		<tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Link - Course Description-provider</th></tr>
+		<tr class="hiderow" id="{{course.courseid}}"><td colspan=3> {{ courseinst_str }} </td></tr>
+	    <tr class="hiderow" id="{{course.courseid}}"><th colspan=3>Date completed & Result</th></tr></thead>
+		<tr class="hiderow" id="{{course.courseid}}"><td colspan=3> {{ coursedate }} {{ coursegrade | prepend : "Result:"}} </td></tr>
+		<tr class="hiderow" id="{{course.courseid}}"><th colspan=3>Link - Course Description-provider</th></tr>
 		{% if courseurl %}
 			{% capture hrefstr %}<a href="{{ courseurl }}">{{ courseurl }}</a>{% endcapture %}
-			<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ hrefstr }} </td></tr>
+			<tr class="hiderow" id="{{course.courseid}}"><td colspan=3> {{ hrefstr }} </td></tr>
 		{% else %}	
-				<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No course description link available </td></tr>		
+				<tr class="hiderow" id="{{course.courseid}}"><td colspan=3> No course description link available </td></tr>		
 		{% endif %}
-		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Link - course result(s) e.g. github</th></tr>
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=3>Link - course result(s) e.g. github</th></tr>
 		{% if coursemyurlresult %}
 	        {% capture hrefstr %}<a href="{{ coursemyurlresult }}">{{ coursemyurlresult }}</a>{% endcapture %}
-			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ hrefstr }} </td></tr>
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=3> {{ hrefstr }} </td></tr>
 		{% else %}	
-				<tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No course result link available </td></tr>	
+				<tr class="hiderow" id="{{course.courseid}}"><td colspan=3> No course result link available </td></tr>	
 		{% endif %}	
-		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Link - My blog course comments/summary on course</th></tr>
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=3>Link - My blog course comments/summary on course</th></tr>
 		{% if coursemyurl %}
 		    {% capture hrefstr %}<a href="{{ coursemyurl }}">{{ coursemyurl }}</a>{% endcapture %}
-			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ hrefstr }} </td></tr>
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=3> {{ hrefstr }} </td></tr>
 		{% else %}
-			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No course blog course comments/summary available </td></tr>
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=3> No course blog course comments/summary available </td></tr>
 		{% endif %}
-		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4>Short inline summary on course</th></tr>		
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=3>Short inline summary on course</th></tr>		
 		{% if course_summary %}
-			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> {{ course_summary }} </td></tr>
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=3> {{ course_summary }} </td></tr>
 		{% else %}
-			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=4> No summary available </td></tr>
+			    <tr class="hiderow" id="{{course.courseid}}"><td colspan=3> No summary available </td></tr>
 		{% endif %}
-		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=4><center>--- End course details overview ---</center></th></tr>	
-		
+		        <tr class="hiderow" id="{{course.courseid}}"><th colspan=3><center>--- End course details overview ---</center></th></tr>	
 	{% endfor %}
-   </tbody>
 </table>
 
 <h2>Number of course listed</h2>

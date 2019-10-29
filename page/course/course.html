@@ -54,7 +54,7 @@ $(document).ready(function(){
 </style>
 
 
-<table width="70%" class="display">
+<table width="70%" class="display" style="font-size:70%">
    <thead>
 	<tr width="70%">
 		<th>Date/Course Description </th>
@@ -120,7 +120,7 @@ $(document).ready(function(){
     {% assign row_index = row_index | plus : 1 %}
 		<td> {{ course.course }} </td>
 		<td> {{ course.institution1  }} </td>
-		<td><button type="button" value="{{ course.courseid }}" class="navi"><center>&#128073;<span title="Show or hide Course details of course">Course details</span></button></center><BR><center>{{ detail_indicator }}</center></td>
+		<td><button type="button" value="{{ course.courseid }}" class="navi" style="font-size:70%"><center>&#128073;<span title="Show or hide Course details of course">Course details</span></button></center><BR><center>{{ detail_indicator }}</center></td>
     </tr>
 	
  		<tr class="hiderow" id="{{course.courseid}}"><th colspan=3><center>--- Begin course details overview ---</center><BR>MyCourseID & Course Name</th></tr>

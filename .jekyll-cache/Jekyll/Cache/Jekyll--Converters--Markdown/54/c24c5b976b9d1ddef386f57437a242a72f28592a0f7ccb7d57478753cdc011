@@ -1,7 +1,7 @@
-I"�	<ul id="markdown-toc">
+I"R<ul id="markdown-toc">
   <li><a href="#coursera-course-reproducible-research" id="markdown-toc-coursera-course-reproducible-research">Coursera course “Reproducible research”</a></li>
-  <li><a href="#to-do-use-case" id="markdown-toc-to-do-use-case">TO DO Use case</a></li>
-  <li><a href="#to-do-business-case" id="markdown-toc-to-do-business-case">TO DO Business case</a></li>
+  <li><a href="#use-case" id="markdown-toc-use-case">Use Case</a></li>
+  <li><a href="#business-case" id="markdown-toc-business-case">Business Case</a></li>
 </ul>
 
 <p>This blog is about a Coursera Data Science course “https://www.coursera.org/learn/reproducible-research” that I completed.</p>
@@ -46,7 +46,27 @@
 
 </p>
 
-<h2 id="to-do-use-case">TO DO Use case</h2>
+<h2 id="use-case">Use Case</h2>
 
-<h2 id="to-do-business-case">TO DO Business case</h2>
+<p>In the course summary this course is describe as:</p>
+
+<p>“This course focuses on the concepts and tools behind reporting modern data analyses in a reproducible manner. Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.”</p>
+
+<p>The concept of reproducible research is from my point of view a very sensible way of working. Reproducible reasearch ideas could also be applied in other domains e.g. software development.</p>
+
+<p><a href="https://www.software.ac.uk/blog/2017-12-06-towards-reproducibility-research-software">https://www.software.ac.uk/blog/2017-12-06-towards-reproducibility-research-software</a></p>
+
+<p>Quality of software delivery could be improved when reproducible reasearch concepts would be applied to software development. E.g. When applying reproducible reasearch the review proces in software development could be facilitated and improved and in this way the overall quality would be improved.</p>
+
+<h2 id="business-case">Business Case</h2>
+
+<p>I have encountered numerous situations where implementing reproducible research guidelines in business can be a good idea. Initially it might seem a lot of overhead to document and work in a reproducible way. 
+The payback of investing/working in reproducible research way will be evident in case of:</p>
+<ul>
+  <li>Employees leaving undocumented work behind when resigning</li>
+  <li>Disasters; e.g. When work needs to be reproduced from documentation</li>
+  <li>Incorrect (scientific) claims;claims can be verified</li>
+  <li>Reuse of work;Reuse of existing work can be improved when there is proper documentation.</li>
+</ul>
+
 :ET

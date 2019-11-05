@@ -1,7 +1,7 @@
-I"	<ul id="markdown-toc">
+I"=<ul id="markdown-toc">
   <li><a href="#coursera-course-practical-machine-learning" id="markdown-toc-coursera-course-practical-machine-learning">Coursera course “Practical Machine Learning”</a></li>
-  <li><a href="#to-do-use-case" id="markdown-toc-to-do-use-case">TO DO Use case</a></li>
-  <li><a href="#to-do-business-case" id="markdown-toc-to-do-business-case">TO DO Business case</a></li>
+  <li><a href="#comments-an-course-result" id="markdown-toc-comments-an-course-result">Comments an course result</a></li>
+  <li><a href="#considerations-before-using-r-for-machine-learning" id="markdown-toc-considerations-before-using-r-for-machine-learning">Considerations before using R for machine learning</a></li>
 </ul>
 
 <p>This blog is about a Coursera “Practical Machine Learning” course that I completed.</p>
@@ -46,7 +46,17 @@
 
 </p>
 
-<h2 id="to-do-use-case">TO DO Use case</h2>
+<h2 id="comments-an-course-result">Comments an course result</h2>
 
-<h2 id="to-do-business-case">TO DO Business case</h2>
+<p>The course solution result shown on github pages for this course is incomplete and not clear. 
+The solution needs to be extended with the orignal assignment and some clearification of what and how the result was realized.</p>
+
+<p>It is unlikely that I will reuse this code. I will probably do an update on R machine learning and blog about an updated R machine learning course.</p>
+
+<h2 id="considerations-before-using-r-for-machine-learning">Considerations before using R for machine learning</h2>
+
+<p>There several considerations when selecting R as a solution for machine learning. 
+R can be a good choice for machine learning. These day Python seems to become very popular in the Data science community. E.g. check the following:</p>
+
+<p><a href="https://www.techrepublic.com/article/r-vs-python-which-is-a-better-programming-language-for-data-science/">https://www.techrepublic.com/article/r-vs-python-which-is-a-better-programming-language-for-data-science/</a></p>
 :ET

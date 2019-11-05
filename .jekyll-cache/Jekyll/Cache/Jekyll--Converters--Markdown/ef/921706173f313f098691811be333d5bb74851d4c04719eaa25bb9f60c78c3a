@@ -1,7 +1,6 @@
-I"�<ul id="markdown-toc">
+I"�<ul id="markdown-toc">
   <li><a href="#coursera-course-single-page-web-apps-with-angularjs" id="markdown-toc-coursera-course-single-page-web-apps-with-angularjs">Coursera course “Single page web apps with angularjs”</a></li>
-  <li><a href="#to-do-use-case" id="markdown-toc-to-do-use-case">TO DO Use case</a></li>
-  <li><a href="#to-do-business-case" id="markdown-toc-to-do-business-case">TO DO Business case</a></li>
+  <li><a href="#considerations-before-selecting-androidjs" id="markdown-toc-considerations-before-selecting-androidjs">Considerations before selecting AndroidJS</a></li>
 </ul>
 
 <p>This blog is about a Coursera course “Single page web apps with angularjs” that I have completed.</p>
@@ -46,7 +45,18 @@
 
 </p>
 
-<h2 id="to-do-use-case">TO DO Use case</h2>
+<h2 id="considerations-before-selecting-androidjs">Considerations before selecting AndroidJS</h2>
 
-<h2 id="to-do-business-case">TO DO Business case</h2>
+<p>Please note that there is a difference between Angular and AngularJS. See:</p>
+
+<p><a href="https://gorrion.io/blog/angularjs-vs-angular">https://gorrion.io/blog/angularjs-vs-angular</a></p>
+
+<p>“Most functionality is for UI Pages and Macros, I think. AngularJS is just MVC (model-view-controller, like Rails and Django) and make it much easier to construct web pages elegantly and quickly, once you master the learning curve, which is steep.   It incorporates the DRY principles (don’t repeat yourself) to make data easier to call and move around.   Plus, if you build the whole thing in Angular, changes to code only has to happen in a single place, generally.”  source</p>
+
+<p><a href="https://community.servicenow.com/community?id=community_question&amp;sys_id=d0e203a1dbd8dbc01dcaf3231f9619b6">https://community.servicenow.com/community?id=community_question&amp;sys_id=d0e203a1dbd8dbc01dcaf3231f9619b6</a></p>
+
+<p>Since I have completed the course a lot of things have changed. A lot of additonal frameworks have become available like React, Vue, Angular. An updated read about webdevelopment (frontend) frameworks can be found here:</p>
+
+<p><a href="https://hackr.io/blog/top-10-web-development-frameworks-in-2019">https://hackr.io/blog/top-10-web-development-frameworks-in-2019</a></p>
+
 :ET

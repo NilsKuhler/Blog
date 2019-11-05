@@ -1,7 +1,6 @@
-I"f	<ul id="markdown-toc">
+I"�<ul id="markdown-toc">
   <li><a href="#coursera-course-developing-data-products" id="markdown-toc-coursera-course-developing-data-products">Coursera course “Developing Data Products”</a></li>
-  <li><a href="#to-do-use-case" id="markdown-toc-to-do-use-case">TO DO Use case</a></li>
-  <li><a href="#to-do-business-case" id="markdown-toc-to-do-business-case">TO DO Business case</a></li>
+  <li><a href="#use-case" id="markdown-toc-use-case">Use case</a></li>
 </ul>
 
 <p>This blog is about a Coursera Data Science course “Developing Data Products” that I completed.</p>
@@ -37,7 +36,7 @@
 		
 		        <tr><th>Short inline summary on course</th></tr>		
 		
-			    <tr><td> This course focuses on the concepts and tools behind reporting modern data analyses in a reproducible manner. Reproducible research is the idea that data analyses&#44; and more generally&#44; scientific claims&#44; are published with their data and software code so that others may verify the findings and build upon them </td></tr>
+			    <tr><td> A data product is the production output from a statistical analysis. Data products automate complex analysis tasks or use technology to expand the utility of a data informed model and algorithm or inference. This course covers the basics of creating data products using Shiny &amp; R packages and interactive graphics. The course will focus on the statistical fundamentals of creating a data product that can be used to tell a story about data to a mass audience. </td></tr>
 		
 		        <thead><tr><th><center>--- End course details overview ---</center></th></tr></thead>
 				
@@ -45,7 +44,12 @@
 
 </p>
 
-<h2 id="to-do-use-case">TO DO Use case</h2>
+<h2 id="use-case">Use case</h2>
 
-<h2 id="to-do-business-case">TO DO Business case</h2>
+<p>“Shiny is an R package that makes it easy to build interactive web apps straight from R. You can host standalone apps on a webpage or embed them in R Markdown documents or build dashboards. You can also extend your Shiny apps with CSS themes, htmlwidgets, and JavaScript actions.” For more information check.</p>
+
+<p><a href="https://shiny.rstudio.com/">https://shiny.rstudio.com/</a></p>
+
+<p>For clients who want to publish some interactive Data (Science) content to the web using R and Shiny as a solution can be considered. For some demonstrations please review:
+<a href="https://shiny.rstudio.com/gallery/">https://shiny.rstudio.com/gallery/</a></p>
 :ET

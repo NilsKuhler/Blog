@@ -17,6 +17,25 @@ Details about the course:
 
 {% include course_detail.md selectedcourse=502 %}
 
-## TO DO Use case
 
-## TO DO Business case
+## Considerations before selecting AndroidJS
+
+Please note that there is a difference between Angular and AngularJS. See:
+
+
+<https://gorrion.io/blog/angularjs-vs-angular>
+
+
+
+"Most functionality is for UI Pages and Macros, I think. AngularJS is just MVC (model-view-controller, like Rails and Django) and make it much easier to construct web pages elegantly and quickly, once you master the learning curve, which is steep.   It incorporates the DRY principles (don't repeat yourself) to make data easier to call and move around.   Plus, if you build the whole thing in Angular, changes to code only has to happen in a single place, generally."  source
+
+<https://community.servicenow.com/community?id=community_question&sys_id=d0e203a1dbd8dbc01dcaf3231f9619b6>
+
+
+
+Since I have completed the course a lot of things have changed. A lot of additonal frameworks have become available like React, Vue, Angular. An updated read about webdevelopment (frontend) frameworks can be found here:
+
+<https://hackr.io/blog/top-10-web-development-frameworks-in-2019>
+
+
+

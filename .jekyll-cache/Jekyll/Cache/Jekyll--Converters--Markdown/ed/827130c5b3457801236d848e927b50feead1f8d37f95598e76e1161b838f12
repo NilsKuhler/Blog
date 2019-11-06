@@ -1,0 +1,72 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#coursera-course-reproducible-research" id="markdown-toc-coursera-course-reproducible-research">Coursera course “Reproducible research”</a></li>
+  <li><a href="#use-case" id="markdown-toc-use-case">Use Case</a></li>
+  <li><a href="#business-case" id="markdown-toc-business-case">Business Case</a></li>
+</ul>
+
+<p>This blog is about a Coursera Data Science course “https://www.coursera.org/learn/reproducible-research” that I completed.</p>
+
+<h2 id="coursera-course-reproducible-research">Coursera course “Reproducible research”</h2>
+
+<p>Details about the course:</p>
+
+<p>
+
+    <table width="70%" class="display">
+	<thead><tr><th><center>--- Course details overview ---</center></th></tr></thead>
+	    <tr><th>MyCourseID &amp; Course Name</th></tr>
+	    <tr><td> 526 - Reproducible Research </td></tr>
+	    <tr><th>Course Provider / Institution</th></tr>
+				
+		<tr><td> Johns Hopkins University by Coursera </td></tr>
+	    <tr><th>Date completed &amp; Result</th></tr>
+		<tr><td> 2015 Result:Grade Achieved: 91.2% with Distinction </td></tr>
+		<tr><th>Link - Course Description-provider</th></tr>
+		
+			
+			<tr><td> <a href="https://www.coursera.org/learn/reproducible-research">https://www.coursera.org/learn/reproducible-research</a> </td></tr>
+		
+		        <tr><th>Link - course result(s) e.g. github</th></tr>
+		
+	        
+			    <tr><td> <a href="http://nilskooler.github.io/Course-Data-Science-Coursera-Preproducible_Research_Ass1/PA1_template.html">http://nilskooler.github.io/Course-Data-Science-Coursera-Preproducible_Research_Ass1/PA1_template.html</a> </td></tr>
+			
+		        <tr><th>Link - My blog course comments/summary on course</th></tr>
+		
+		    
+			    <tr><td> <a href="/2015/07/22/completed-coursera-reproducible-research/">/2015/07/22/completed-coursera-reproducible-research/</a> </td></tr>
+		
+		        <tr><th>Short inline summary on course</th></tr>		
+		
+			    <tr><td> This course focuses on the concepts and tools behind reporting modern data analyses in a reproducible manner. Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them </td></tr>
+		
+		        <thead><tr><th><center>--- End course details overview ---</center></th></tr></thead>
+				
+	    </table>
+
+</p>
+
+<h2 id="use-case">Use Case</h2>
+
+<p>In the course summary this course is describe as:</p>
+
+<p>“This course focuses on the concepts and tools behind reporting modern data analyses in a reproducible manner. Reproducible research is the idea that data analyses, and more generally, scientific claims, are published with their data and software code so that others may verify the findings and build upon them.”</p>
+
+<p>The concept of reproducible research is from my point of view a very sensible way of working. Reproducible reasearch ideas could also be applied in other domains e.g. software development. Check the following article:</p>
+
+<p><a href="https://www.software.ac.uk/blog/2017-12-06-towards-reproducibility-research-software">https://www.software.ac.uk/blog/2017-12-06-towards-reproducibility-research-software</a></p>
+
+<p>Quality of software delivery could be improved when reproducible reasearch concepts would be applied to software development. E.g. When applying “reproducible reasearch” the review proces in software development could be significantly facilitated and improved because all required information for a proper review is available. A reviewer could even be requested to recreate an complete enviroment.</p>
+
+<h2 id="business-case">Business Case</h2>
+
+<p>I have encountered numerous situations where implementing reproducible research guidelines in business can be a good idea. Initially it might seem a lot of overhead to document and work in a reproducible way. 
+The payback of investing/working in reproducible research way will be evident in case of:</p>
+<ul>
+  <li>Employees leaving undocumented work behind when resigning</li>
+  <li>Disasters; e.g. When work needs to be reproduced from documentation</li>
+  <li>Incorrect (scientific) claims;claims can be verified</li>
+  <li>Reuse of work;Reuse of existing work can be improved when there is proper documentation.</li>
+</ul>
+
+:ET

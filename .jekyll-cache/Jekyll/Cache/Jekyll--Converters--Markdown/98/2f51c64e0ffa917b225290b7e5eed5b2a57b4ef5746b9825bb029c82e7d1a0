@@ -1,0 +1,80 @@
+I"�<ul id="markdown-toc">
+  <li><a href="#coursera-course-practical-machine-learning" id="markdown-toc-coursera-course-practical-machine-learning">Coursera course “Practical Machine Learning”</a></li>
+  <li><a href="#comments-an-course-result" id="markdown-toc-comments-an-course-result">Comments an course result</a></li>
+  <li><a href="#considerations-before-using-r-for-machine-learning" id="markdown-toc-considerations-before-using-r-for-machine-learning">Considerations before using R for machine learning</a></li>
+</ul>
+
+<p>This blog is about a Coursera “Practical Machine Learning” course that I completed.</p>
+
+<h2 id="coursera-course-practical-machine-learning">Coursera course “Practical Machine Learning”</h2>
+
+<p>Details about the course:</p>
+
+<p>
+
+    <table width="70%" class="display">
+	<thead><tr><th><center>--- Course details overview ---</center></th></tr></thead>
+	    <tr><th>MyCourseID &amp; Course Name</th></tr>
+	    <tr><td> 531 - Practical Machine Learning </td></tr>
+	    <tr><th>Course Provider / Institution</th></tr>
+				
+		<tr><td> Johns Hopkins University by Coursera </td></tr>
+	    <tr><th>Date completed &amp; Result</th></tr>
+		<tr><td> 2015 Result:Grade Achieved: 93.0% with Distinction </td></tr>
+		<tr><th>Link - Course Description-provider</th></tr>
+		
+			
+			<tr><td> <a href="https://www.coursera.org/learn/practical-machine-learning">https://www.coursera.org/learn/practical-machine-learning</a> </td></tr>
+		
+		        <tr><th>Link - course result(s) e.g. github</th></tr>
+		
+	        
+			    <tr><td> <a href="http://nilskooler.github.io/Course-Coursera-Machine-learning-R-predmachlearn/PredictionMotivation.html">http://nilskooler.github.io/Course-Coursera-Machine-learning-R-predmachlearn/PredictionMotivation.html</a> </td></tr>
+			
+		        <tr><th>Link - My blog course comments/summary on course</th></tr>
+		
+		    
+			    <tr><td> <a href="/2015/04/26/completed-coursera-RmachineLearning/">/2015/04/26/completed-coursera-RmachineLearning/</a> </td></tr>
+		
+		        <tr><th>Short inline summary on course</th></tr>		
+		
+			    <tr><td> One of the most common tasks performed by data scientists and data analysts are prediction and machine learning </td></tr>
+		
+		        <thead><tr><th><center>--- End course details overview ---</center></th></tr></thead>
+				
+	    </table>
+
+</p>
+
+<h2 id="comments-an-course-result">Comments an course result</h2>
+
+<p>Here is one of the example programs developped for the course.</p>
+
+<p><a href="https://github.com/NilsKooler/Course-Coursera-Machine-learning-R-predmachlearn/blob/master/Assignment1.Rmd">https://github.com/NilsKooler/Course-Coursera-Machine-learning-R-predmachlearn/blob/master/Assignment1.Rmd</a></p>
+
+<p>Here is a motivation for the prediction</p>
+
+<p><a href="https://github.com/NilsKooler/Course-Coursera-Machine-learning-R-predmachlearn/blob/master/Motivation.txt">https://github.com/NilsKooler/Course-Coursera-Machine-learning-R-predmachlearn/blob/master/Motivation.txt</a></p>
+
+<p>Here is the final result:</p>
+
+<p><a href="https://github.com/NilsKooler/Course-Coursera-Machine-learning-R-predmachlearn/blob/master/PredictionMotivation.html">https://github.com/NilsKooler/Course-Coursera-Machine-learning-R-predmachlearn/blob/master/PredictionMotivation.html</a></p>
+
+<p>The final result is also available als github page.</p>
+
+<p><a href="http://nilskooler.github.io/Course-Coursera-Machine-learning-R-predmachlearn/PredictionMotivation.html">http://nilskooler.github.io/Course-Coursera-Machine-learning-R-predmachlearn/PredictionMotivation.html</a></p>
+
+<p>Since I dd the course in 2015 a lot of R resources have become available. E.g.</p>
+
+<p><a href="https://www.datacamp.com/community/tutorials/machine-learning-in-r">https://www.datacamp.com/community/tutorials/machine-learning-in-r</a></p>
+
+<p>It is unlikely that I will reuse this code since this course result is from 2015. 
+Uf there is an opportunity I will do an R update course.</p>
+
+<h2 id="considerations-before-using-r-for-machine-learning">Considerations before using R for machine learning</h2>
+
+<p>There several considerations when selecting R as a solution for machine learning. 
+R can be a good choice for machine learning. These day Python seems to become very popular in the Data science community. E.g. check the following:</p>
+
+<p><a href="https://www.techrepublic.com/article/r-vs-python-which-is-a-better-programming-language-for-data-science/">https://www.techrepublic.com/article/r-vs-python-which-is-a-better-programming-language-for-data-science/</a></p>
+:ET

@@ -60,6 +60,11 @@ tag_dir: tag/
 # excerpt
 excerpt_separator: "\n\n\n\n"
 
+#Feb 2025: Had to include underneeth to get it working 
+plugins: [jekyll-paginate]
+
 # paginate
 gems: [jekyll-paginate]
 paginate: 6
+
+

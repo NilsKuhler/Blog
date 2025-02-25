@@ -30,24 +30,22 @@ $(document).ready(function(){
 <div class="page clearfix">
     <div class="left">
         <h1>Completed courses overview</h1>
-        <hr>
-            <div class="side">
-
-        <h2>Intro</h2>
-	    <p>This page (will) document(s) all courses and trainings completed. Click last column in table underneath to display more course details. Legend; An explaination of the symbols used in the last column underneath.</p>
-		<table class="display">
+        <p></p>
+	<p>This page contains 2 tables. The first table is a legend for the second table. The second table contains all courses and trainings completed.</p>
+                <table>
 		<thead>
-		<tr><th>Symbol</th><th>Meaning</th></tr>
+		<tr><th>Column in table</th><th>Symbol</th><th>Meaning</th></tr>
 		</thead>
 		<tbody>
-        <tr><td><span title="Most course details filled in">&#9989;</span></td><td>Most course details filled in</td></tr>
-        <tr><td><span title="Few course details filled in">&#128221;</span></td><td>Few course details filled in</td></tr>
-		<tr><td></td><td>Some or no course details filled in</td></tr>
+        <tr><td>1</td><td><span title="Course is completed with certificate">Name of course AND &#128220; </span></td><td>Course is completed with certificate</td></tr>
+        <tr><td>3</td><td><span title="Most course details filled in">&#9989; </span></td><td>Most course details filled in</td></tr>
+        <tr><td>3</td><td><span title="Few course details filled in">&#128221; </span></td><td>Few course details filled in</td></tr>
+	<tr><td>3</td><td></td><td>Some or no course details filled in</td></tr>
 		</tbody>
 		</table>  
-	    <p>The symbol &#128220; is used to show if a course is completed with a certificate</p>
-				  
-        <h2>History completed course table </h2>
+        <h1>Completed courses table</h1>
+<p>This table underneeth describes all courses and trainings completed.</br>
+Click last column(&#128071;) for a certain course in the table underneath to display additional course details.</p>
 
 
 <style type="text/css">
@@ -70,7 +68,6 @@ $(document).ready(function(){
 
 		{% assign courseid= course.courseid %}
 		{% assign coursename = course.course %}
-		{% assign courseid = course.courseid %}
 		{% assign coursedate = course.date %}
 		{% assign courseinst1 = course.institution1 %}
 		{% assign courseinst2 = course.institution2 %}
@@ -79,6 +76,7 @@ $(document).ready(function(){
 		{% assign courseurl = course.url_course %}
 		{% assign coursemyurl = course.myurl_course %}
 		{% assign coursemyurlresult = course.myurl_result %}
+		{% assign coursecertificate = course.certificate %}
 		{% assign course_summary = course.summary %}
 		
 		{% assign nb_custom_fields = 0 %}
@@ -105,6 +103,11 @@ $(document).ready(function(){
 		   {% capture detail_indicator %}<span title="{{ span_text }}">&#128221;</span>{% endcapture %}
 		{% endif %}
 
+                {% assign displaycert = "" %}
+                {% if coursecertificate == 'CERTIFIED' %}
+                   {% assign displaycert = "&#128220;" %}
+		{% endif %}
+                
 	
 		{% assign date_year_course = course.date | slice : 0 , 4 %}			
 		{% if last_print_date != date_year_course %}
@@ -119,7 +122,7 @@ $(document).ready(function(){
 		
     <tr width="70%">
     {% assign row_index = row_index | plus : 1 %}
-		<td> {{ course.course }} </td>
+		<td> {{ course.course }} {{ displaycert }}</td>
 		<td> {{ course.institution1  }} </td>
 		<td><button type="button" value="{{ course.courseid }}" class="navi" style="font-size:70%"><center>&#128073;<span title="Show or hide Course details of course">Course details</span></button></center><BR><center>{{ detail_indicator }}</center></td>
     </tr>
@@ -169,9 +172,8 @@ $(document).ready(function(){
 	{% endfor %}
 </table>
 
-<h2>Number of course listed</h2>
+<h2>Number of courses listed in table: {{row_index }} </h2>
 
-There are {{row_index }} number of courses listed on this page. 
 				
 			</div>	
 

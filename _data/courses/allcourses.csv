@@ -1,5 +1,5 @@
 courseid,date,course,institution1,institution2,grade,url_course,myurl_course,myurl_result,certificate,my_rating,comment,summary
-250,2025,Course,Microsoft Learn,Microsoft,,https://learn.microsoft.com/nl-nl/training/paths/get-started-with-microsoft-365-copilot/,https://nilskuhler.github.io/PublicDocs/Documents/Courses/Microsoft-Learn/Copilot - Build custom agents for Microsoft Teams.pdf,,CERTIFIED,,,
+250,2025,Microsoft-365-copilot Introduction,Microsoft Learn,Microsoft,100%,https://learn.microsoft.com/nl-nl/training/paths/get-started-with-microsoft-365-copilot/,,https://nilskuhler.github.io/PublicDocs/Documents/Courses/Microsoft-Learn/Copilot - Build custom agents for Microsoft Teams.pdf,CERTIFIED,,,
 332,2025,Dataiku ML Practioner,Dataiku Academy,,,https://nilskuhler.github.io/PublicDocs/Documents/Courses/Dataiku/Dataiku_ML_Practioner_items.pdf,,,CERTIFIED,,,
 333,2025,Machine Learning Deep Learning Model Deployment,FutureX-Udemy,,,,,,,,,
 334,2025,Create a Python powered Chatbot,Udemy,,,,,,,,,
